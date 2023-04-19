@@ -1,8 +1,9 @@
 import React from "react";
+import HomePage from "./pages/home.page";
 
 function App() {
   return (
-      <h2>Clo Solutions WebSite</h2>
+      <HomePage />
   );
 }
 
