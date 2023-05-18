@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight, faFaceSmile, faPersonChalkboard, faPeopleRoof, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
-import { checkmark, closetafter, closetbefore, consultationbkg, hamperafter, hamperbefore, kitchencabinetsafter, kitchencabinetsbefore, kitchendrawerafter, kitchendrawerbefore, testbkg1, testbkg2, testbkg3, testbkg4, testbkg5, testbkg6, wardrobeafter, wardrobebefore } from "./assets/index.assets";
+import { checkmark, closetafter, closetbefore, consultationbkg, hamperafter, hamperbefore, kitchencabinetsafter, kitchencabinetsbefore, kitchendrawerafter, kitchendrawerbefore, testbkg1, testbkg2, testbkg3, testbkg4, testbkg6, wardrobeafter, wardrobebefore } from "./assets/index.assets";
 
 
 /***

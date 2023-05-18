@@ -24,11 +24,14 @@ const HeaderContent = () => {
     const quoteleft = cloIcons[0].icon
     const quoteright = cloIcons[1].icon
 
-    function getRandomDailyPhrases(messages) {
+    /**TESTING  */
+    /**
+     * function getRandomDailyPhrases(messages) {
       
         const randomIndex = Math.floor(Math.random() * messages.length);
         return messages[randomIndex];
       }
+     */
       
 
     return(
