@@ -26,37 +26,52 @@
    font-size: 62.5%;
  
    /* Main colors for the project **/
- 
+   
+   /*basic colors**/
+   --clr-white: #fff;
+   
    --color-primary:hsla(40, 67%, 87%, 1);
-   --color-primary-light:hsla(40, 67%, 87%, 0.55);
-   --color-primary-dark:hsla(40, 67%, 87%, 0.85);
+   --color-primary-light: hsla(40, 67%, 87%, 0.85);
+   --color-primary-dark: hsla(40, 67%, 87%, 0.55);
  
    --color-secondary:hsla(330, 64%, 90%, 1);
-   --color-secondary-light:hsla(330, 64%, 90%, 0.55);
-   --color-secondary-dark:hsla(330, 64%, 90%, .85);
+   --color-secondary-light:hsla(330, 64%, 90%, .85);
+   --color-secondary-dark:hsla(330, 64%, 90%, 0.55);
  
-   --color-tertiary:hsla(331, 37%, 72%, 1);
-   --color-tertiary-light:hsla(331, 37%, 72%, 0.55);
-   --color-tertiary-dark:hsla(331, 37%, 72%, 0.85);
- 
-   --color-quarternary:hsla(240, 52%, 87%, 1);
-   --color-quarternary-light:hsla(240, 52%, 87%, 0.6);
-   --color-quarternary-dark:hsla(240, 52%, 87%, 0.85);
-
-   --color-fifth:hsla(176, 41%, 87%, 1);
-   --color-fifth-light:hsla(176, 41%, 87%, 0.6);
-   --color-fifth-dark:hsla(176, 41%, 87%, 0.85);
- 
+   --color-tertiary: hsla(331, 26%, 65%, 1); 
+   --color-tertiary-light:hsla(331, 37%, 72%, 0.85) ;
+   --color-tertiary-dark:hsla(331, 37%, 72%, 0.55);
+   
+   --color-quarternary: hsla(240, 52%, 87%, 0.85);
+   --color-quarternary-light:hsla(240, 52%, 87%, 1);
+   --color-quarternary-dark: hsla(240, 52%, 87%, 0.6);
+   
+   --color-fifth:hsla(177, 21%, 78%, 1);
+   --color-fifth-light:hsla(176, 41%, 87%, 1);
+   --color-fifth-dark:hsla(180, 6%, 43%, 1);
+   --color-fifth-more-light:hsla(170, 67%, 96%, 1);
+   
+   --color-sixth:hsla(240, 41%, 63%, 1);
    /* Transition duration **/
  
    --transition-duration: 0.3s;
  
    /*section title font size**/
    --font-size-title: calc( 2rem + 2vw);
+   --font-size-footer-up-down: calc(0.6rem + 0.6vw);
+   --font-size-footer: calc(0.75rem + 0.75vw);
+   --font-size-para: calc(1rem + 1vw);
+   --font-size-para--600: calc(1.2rem + 1.2vw);
+   --font-size-title-section: calc( 3rem + 0.5vw);
+   --font-size-daily-phrases: calc(1rem + 1vw);
  
    /*section Padding**/
    --padding-section: 8vh 3vw;
- 
+
+   /*color fonts**/
+    --font-color-brown-dark:hsla(30, 23%, 20%, 1);
+    --font-color-brown-m-ligth: hsla(29, 22%, 41%, 1);
+    --font-color-light:hsla(29, 21%, 62%, 1);
  }
  
  .container{
@@ -77,14 +92,19 @@
  
  a:link,
  a:visited {
-   color: var(--color-quarternary);
+   color: var(--font-color-brown-dark);
    text-decoration: none;
    font-size: calc(0.5rem + 1vw);
-   padding: 1rem 2rem;
+   font-weight: 500;
+   padding: 2rem 2rem;
    border-radius: 0.3rem;
    position: relative;
    transition: all var(--transition-duration) cubic-bezier(1,0,0,1);
    z-index: 1;
+ }
+
+ a:hover{
+  color: var(--color-sixth);
  }
  
  /**Paraghraps --------*/
@@ -110,28 +130,96 @@
    grid-column: container-start / container-end;
  }
  
+ .header_logo-content--para{
+    font-size: var(--font-size-daily-phrases);
+}
  
  /*villas section ----**/
- section#villas{
+ section#work-preview{
    background-color: var(--color-quarternary-light);
    grid-column: center-start / center-end;
-   height: 400px;
  }
  
  /*events content ----**/
  section#events-content{ 
    background-color: var(--color-tertiary);
    grid-column: container-start / col-end 9;
-   height: 400px;
+ 
  }
  
  /*events content ----**/
- section#events-text{ 
+ section#events-text,
+ section#features-text{ 
    background-color: var(--color-fifth);
    grid-column: col-start 10 / center-end;
-   height: 400px;
+
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   place-items: center;
  }
+
+ .main-button {
+  width: 30rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-fifth-dark);
+  background-color: var(--color-fifth);
+  margin-left: var(--font-size-title);
+  margin-bottom: 5rem;
+  color: var(--font-color-brown-dark);
+  font-weight: 500;
+}
+
+.main-button:hover{
+  background-color: var(--clr-white);
+  border: 1px solid var(--color-secondary);
+  border-radius: 0.75rem;
+  color: var(--color-sixth);
+}
  
+ .events-text--content,
+ .features-text--content{
+    transform: rotate(90deg);
+ }
+
+ .events-text--title,
+ .features-text--title{
+  margin: 1rem;
+  padding: 1rem;
+  font-size: var(--font-size-title-section);
+  font-weight: 500;
+  color: var(--clr-white);
+  letter-spacing: 0.2rem;
+ }
+
+ .events-content-para{
+    background-color: var( --color-secondary);
+    display: grid;
+    border-radius: 0.75rem;
+    margin: 2.5rem;
+    padding: 1rem;
+    place-content: center;
+ }
+
+ .events-content-para > p{
+  margin: 2.5rem;
+  padding: 1rem; 
+  font-size: var(--font-size-para);
+  color: var(--font-color-brown-dark);
+  line-height: 6rem;
+ }
+
+ /*Our process section **/
+ section#ourprocess,
+ section#work-preview{ 
+    grid-column: center-start / center-end;
+    padding: var(--padding-section);
+    place-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 28rem);
+    grid-gap: 5rem;
+ }
+
  /*features content ----**/
  section#features-content{ 
    background-color: var(--color-tertiary);
@@ -150,5 +238,42 @@
  section#footer{ 
    background-color: var(--color-fifth-light);
    grid-column: container-start / container-end;
-   height: 400px;
+   height: 150px;
  }
+
+ @media screen and (max-width:1000px){
+  .header_logo-content--para{
+    font-size: calc(2rem + 1vw);
+  }
+
+ }
+
+ @media screen and (max-width:971px){
+  section#features-text{
+    display: none;
+  }
+
+  section#features-content{ 
+    grid-column: container-start / container-end;
+  }
+}
+
+@media screen and (max-width:600px){
+    section#events-text{
+      display: none;
+    }
+
+    section#events-content{ 
+      grid-column: container-start / container-end;
+    }
+
+    .events-content-para > p,
+    a:link, a:visited {
+      font-size: var(--font-size-para--600);
+    }
+
+    section#ourprocess,
+    section#work-preview{ 
+      grid-template-columns: repeat(auto-fit, 28rem);
+    }
+}

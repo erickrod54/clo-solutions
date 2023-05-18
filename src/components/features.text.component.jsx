@@ -13,7 +13,11 @@ const FeaturesText = () => {
 
     return(
         <section id="features-text"> 
-            Services and pricing
+        <div className="features-text--content">
+                <h2 className="features-text--title">
+                Consultation
+                </h2>
+            </div>
         </section>
     )
 }

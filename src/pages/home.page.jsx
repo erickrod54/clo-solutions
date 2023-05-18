@@ -1,5 +1,5 @@
 import React from "react";
-import { HeaderComponent, EventsComponent, FeaturesComponent, VillasComponent, FooterComponent } from '../components/index.components'
+import { HeaderComponent, EventsComponent, FeaturesComponent, FooterComponent, OurProcess, WorkPreview } from '../components/index.components'
 
 /**vlv-villages version 1 - HomePage - Features:
  * 
@@ -15,8 +15,9 @@ const HomePage = () => {
             <div className="container">
                 <HeaderComponent />
                 <EventsComponent />
+                <OurProcess />
                 <FeaturesComponent />
-                <VillasComponent />               
+                <WorkPreview />               
                 <FooterComponent />
             </div>
         </>
