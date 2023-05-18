@@ -3,7 +3,12 @@ import React from "react";
 const ServicesAndPricing = () => {
 
     return(
-        <h2>Services And Pricing</h2>
+        <section id='services-and-pricing-page'>
+            <div className="services-and-pricing-page--content">
+                <h2>Services And Pricing</h2>
+
+            </div>
+        </section>
     )
 }
 

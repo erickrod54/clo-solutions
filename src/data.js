@@ -46,18 +46,26 @@ export const cloIcons = [
 export const mainNavLinks = [
     {
         id:1,
-        linkname:'home'
+        linkname:'home',
+        url:'/'
     },
     {
         id:2,
-        linkname:'Services and pricing'
+        linkname:'Services and pricing',
+        url:'/services-and-pricing'
     },
     {
         id:3,
-        linkname:'About us'
+        linkname:'About us',
+        url:'/about-us'
     },
     {
         id:4,
+        linkname:'Work preview',
+        url:'/work-preview'
+    },
+    {
+        id:5,
         linkname:'contact'
     }
 ]

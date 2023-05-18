@@ -19,7 +19,7 @@ import { LogoComponent, HeaderContent } from './index.components';
 const HeaderComponent = () => {
     
     const { mainNavLinks } = useCloContext()
-    //console.log('mainNavLinks ==>', mainNavLinks);
+    console.log('mainNavLinks ==>', mainNavLinks);
 
     return(
         <header id="header">
@@ -31,10 +31,10 @@ const HeaderComponent = () => {
                     <div>
                         <div>
                             {mainNavLinks.map((link) => {
-                                const {id, linkname } = link;
+                                const {id, linkname, url } = link;
                                 return(
                                     <ul key={id}>
-                                        <li><Link to='#'>{linkname}</Link></li>
+                                        <li><Link to={url}>{linkname}</Link></li>
                                     </ul>
                                 )
                             })}

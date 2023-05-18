@@ -159,6 +159,28 @@
    place-items: center;
  }
 
+ /*pages styles**/
+ section#about-us-page,
+ section#services-and-pricing-page,
+ section#work-preview-page{
+  display: grid;
+  grid-column: container-start / container-end;
+  background-color: var(--color-tertiary-dark);
+  padding: 4rem;
+  margin: 4rem;
+  height: 100vh;
+ }
+
+ .services-and-pricing-page--content,
+ .about-us-page--content,
+ .work-preview--content{
+    display: grid;
+    margin: .2rem;
+    justify-content: center;
+    background-color: var(--color-secondary-light);
+ }
+ 
+
  .main-button {
   width: 30rem;
   border-radius: 0.75rem;
