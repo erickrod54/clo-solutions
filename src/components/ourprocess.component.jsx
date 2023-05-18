@@ -130,9 +130,14 @@ const TestimonialsWrapper = styled.section`
         font-size: var(--font-size-footer-up-down);
     }
 
+    .testimonials-card--back ul{
+        display: grid;
+        place-content: center;
+    }
+
     .testimonials-card--back ul li{
         display: flex;
-        margin: 2rem;
+        margin: 1rem;
     }
 
     .testimonials-card--back ul li img{
