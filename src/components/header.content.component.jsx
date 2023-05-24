@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from 'react-router-dom'; 
+import React from "react"; 
 import { useCloContext } from "../context";
 import { logocolor } from '../assets/index.assets';
 
@@ -48,7 +47,7 @@ const HeaderContent = () => {
                 {quoteright}
             </i>
         </div>
-        <Link to='#' className="header_logo-content--link">check out our services</Link>
+        
     </div>     
     )
 }

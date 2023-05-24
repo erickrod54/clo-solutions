@@ -11,7 +11,7 @@ const EventsContent = () => {
     const aboutUsText = aboutUsData[0].text;
     const aboutUsTextSlice = aboutUsText.slice(0,240);
     //const aboutUsTextLength = aboutUsText.length;
-    const aboutUsTextSliceFinal = aboutUsText.slice(1070,1400);
+    const aboutUsTextSliceFinal = aboutUsText.slice(1067,1400);
 
     //console.log(' aboutUsTextLength ==>', aboutUsTextLength);
 

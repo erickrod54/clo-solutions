@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { useCloContext } from "../context";
 import { Link } from 'react-router-dom';
-import { LogoComponent, HeaderContent } from './index.components';
+import { HeaderContent } from './index.components';
 
+/**header_logo-content--logo */
 /**vlv-villages version 1.04 - HeaderComponent -
  * Features:
  * 
@@ -19,7 +20,6 @@ import { LogoComponent, HeaderContent } from './index.components';
 const HeaderComponent = () => {
     
     const { mainNavLinks } = useCloContext()
-    console.log('mainNavLinks ==>', mainNavLinks);
 
     return(
         <header id="header">
@@ -43,8 +43,10 @@ const HeaderComponent = () => {
                 </div>
             </nav>
             <div className="header_logo-content">
-                <LogoComponent />
+                <div className="background-image"/>
+                
                 <HeaderContent />
+                
             </div>
             </WrapperHeader>
         </header>
@@ -52,6 +54,7 @@ const HeaderComponent = () => {
 }
 
 const WrapperHeader = styled.div`
+
         /*Nav**/
     /*position fixed makes the navigation fixed
     *to the scroll behavior**/
@@ -222,11 +225,21 @@ const WrapperHeader = styled.div`
     opacity: 1;
     }
 
+    .header_main-nav--menu div div{
+        border-radius: 0.75rem;
+        margin: 1rem;
+        padding: 2rem;
+        background-color: var(--color-fifth-more-light);
+    }
+
     /**this is the styles for the links --*/
     .header_main-nav--menu ul li a:link,
     .header_main-nav--menu ul li a:visited{
+    
+    text-transform: capitalize;
+    color: var(--clr-black);
     z-index: 5;
-    font-size: calc(1.5rem + 0.5vw);
+    font-size: calc(2rem + 0.5vw);
     }
 
     .header_main-nav--menu ul li a:link::before,
@@ -238,6 +251,7 @@ const WrapperHeader = styled.div`
     height: 100%;
     width: 100%;
     z-index: -1;
+   
     transform: scaleY(0);
     border-radius: 0.75rem;
     border: 1px solid var(--color-fifth-dark);
@@ -253,7 +267,8 @@ const WrapperHeader = styled.div`
     .header_logo-content{
     display: grid;
     /**giving '1fr' to the sides they are going to shrink first nad the center at last using 'minmax'*/
-    grid-template-columns: 1fr minmax(30rem, 1fr) 1fr;
+    
+    grid-template-columns: 1fr minmax(30rem, 1fr) 0.2fr;
     grid-template-rows: min-content;
     height: 90%;
     justify-items: center;
@@ -273,6 +288,15 @@ const WrapperHeader = styled.div`
     .header_logo-content--content{
     grid-column: 1 / -1;
     align-self: center;
+    }
+
+    .header_logo-content--quatation-container{
+        
+        border: 1.5px solid var(--color-sixth);
+        border-radius: .75rem;
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background-color: var(--color-fifth-light);
     }
 
     .header_logo-content--title{

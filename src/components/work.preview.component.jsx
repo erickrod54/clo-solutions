@@ -72,7 +72,7 @@ const WorkPreviewWrapper = styled.section`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
+    box-shadow: 5px 5px 5px 5px #222 ;  
     position: absolute;
     top: 0;
     left: 0;

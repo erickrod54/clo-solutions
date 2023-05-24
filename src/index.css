@@ -16,7 +16,7 @@
  }
  
  body{
-   font-family: 'Titillium Web', sans-serif;
+   font-family: 'Julius Sans One', sans-serif;
    line-height: 1.7;
    background-color: var(--color-primary);
  }
@@ -52,15 +52,18 @@
    --color-fifth-more-light:hsla(170, 67%, 96%, 1);
    
    --color-sixth:hsla(240, 41%, 63%, 1);
+
+   --clr-black: #222;
+
    /* Transition duration **/
  
    --transition-duration: 0.3s;
  
    /*section title font size**/
-   --font-size-title: calc( 2rem + 2vw);
-   --font-size-footer-up-down: calc(0.6rem + 0.6vw);
+   --font-size-title: calc( 1.2rem + 2vw);
+   --font-size-footer-up-down: calc(0.65rem + 0.65vw);
    --font-size-footer: calc(0.75rem + 0.75vw);
-   --font-size-para: calc(1rem + 1vw);
+   --font-size-para: calc(0.95rem + 0.75vw);
    --font-size-para--600: calc(1.2rem + 1.2vw);
    --font-size-title-section: calc( 3rem + 0.5vw);
    --font-size-daily-phrases: calc(1rem + 1vw);
@@ -120,15 +123,29 @@
  }
  
  i{
+   margin: 0.6rem;
    font-size: var(--font-size-title);
-   color: var(--color-secondary);
+   color: var(--color-sixth);
  }
  
  /**Main Styling*/
  header#header{
-   background-color: var(--color-fifth-light);
+   
+   /*background-image: url(./assets/closet-header-blue.jpeg);**/
    grid-column: container-start / container-end;
+   
  }
+
+ header#header .background-image {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/closet-header.jpeg);
+  opacity: 0.5; /* Adjust the opacity value as needed (0.0 to 1.0) */
+  }
  
  .header_logo-content--para{
     font-size: var(--font-size-daily-phrases);
@@ -268,6 +285,8 @@
     font-size: calc(2rem + 1vw);
   }
 
+  
+
  }
 
  @media screen and (max-width:971px){
@@ -281,6 +300,11 @@
 }
 
 @media screen and (max-width:600px){
+
+  section#features-content {
+    background-color: var(--color-secondary);
+  }
+
     section#events-text{
       display: none;
     }
@@ -293,6 +317,10 @@
     a:link, a:visited {
       font-size: var(--font-size-para--600);
     }
+
+    .events-content-para > p{
+      line-height: 5rem;
+     }
 
     section#ourprocess,
     section#work-preview{ 

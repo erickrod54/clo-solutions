@@ -32,7 +32,6 @@ const Wrapper = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--clr-black);
   text-align: center;
   span {
     font-size: var(--font-size-footer);

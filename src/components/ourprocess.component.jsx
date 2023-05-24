@@ -44,8 +44,7 @@ const OurProcess = () => {
             return(
                 <div key={id} className="testimonials-card">
                 <div className="testimonials-card--front">
-                <h2 className="testimonials-card--title">{title}</h2>
-                <i>{icon}</i>
+                <h2 className="testimonials-card--title"><i>{icon}</i> {title}</h2>
                 </div>
                 <div className="testimonials-card--back">
                     { id === 3 ? 
@@ -106,6 +105,8 @@ const TestimonialsWrapper = styled.section`
     background-position: center;
     background-size: cover;
 
+    box-shadow: 5px 5px 5px 5px #222;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -147,6 +148,7 @@ const TestimonialsWrapper = styled.section`
 
     .testimonials-card--front h2{
     background-color: var(--color-secondary-light);
+    font-size: 1.3rem;
     padding: 1rem;
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
@@ -179,11 +181,19 @@ const TestimonialsWrapper = styled.section`
         background-image: url(${({bkg3}) => bkg3});
     }
 
+    .testimonials-card:nth-child(3) .testimonials-card--back p{
+      font-size: var(--font-size-footer-up-down);
+     }
+
     .testimonials-card:nth-child(4) .testimonials-card--front::before{
         content: "";
         opacity: 0.5; /* Set the opacity of the background image */
         z-index: -1; /* Send the background image behind the text */
         background-image: url(${({bkg4}) => bkg4});
+    }
+
+    .testimonials-card:nth-child(4) .testimonials-card--back p{
+    font-size: var(--font-size-footer-up-down);
     }
 
     .testimonials-card--back {
@@ -201,6 +211,13 @@ const TestimonialsWrapper = styled.section`
     /*the 'perspective(100rem)' with hover will make the 3d effect**/
     .testimonials-card:hover .testimonials-card--back{
     transform: perspective(100rem) rotateY(1turn);
+    }
+
+    @media screen and (max-width:600px){
+        .testimonials-card:nth-child(3) .testimonials-card--back p,
+        .testimonials-card:nth-child(4) .testimonials-card--back p{
+            font-size: var(--font-size-para);
+        }
     }
 `
 

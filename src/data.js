@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight, faFaceSmile, faPersonChalkboard, faPeopleRoof, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
-import { checkmark, closetafter, closetbefore, consultationbkg, hamperafter, hamperbefore, kitchencabinetsafter, kitchencabinetsbefore, kitchendrawerafter, kitchendrawerbefore, testbkg1, testbkg2, testbkg3, testbkg4, testbkg6, wardrobeafter, wardrobebefore } from "./assets/index.assets";
-
+import { checkmark, closetafter, closetbefore, closetheader, closetheaderblue, consultationbkg, consultationbkgremove, hamperafter, hamperbefore, kitchencabinetsafter, kitchencabinetsbefore, kitchendrawerafter, kitchendrawerbefore, testbkg1, testbkg2, testbkg3, testbkg4, testbkg6, wardrobeafter, wardrobebefore } from "./assets/index.assets";
 
 /***
  * 
  * 
+ * closetheader, closetheaderblue
  home
 Services and pricing
 About us
@@ -51,17 +51,17 @@ export const mainNavLinks = [
     },
     {
         id:2,
-        linkname:'Services and pricing',
+        linkname:'services and pricing',
         url:'/services-and-pricing'
     },
     {
         id:3,
-        linkname:'About us',
+        linkname:'about us',
         url:'/about-us'
     },
     {
         id:4,
-        linkname:'Work preview',
+        linkname:'work preview',
         url:'/work-preview'
     },
     {
@@ -73,7 +73,7 @@ export const mainNavLinks = [
 export const MainMessage = 'Clo Solutions LOGO';
 
 export const DailyPhrases = [
-    'Planing is an essential tool for organizing your daily tasks and appointments',
+    'Creating Custom Organization Systems for you, let us be part of the SOLUTION',
     'A professional decluttering service can help you achieve this efficiently.',
     'An organizer is a valuable resource for anyone looking to streamline their belongings and maximize storage space in their home or office.',
     'Labeling your belongings is a simple yet effective way to stay organized and ensure that everything has a designated place',
@@ -144,8 +144,23 @@ export const backgroundsImages = [
     },
     {
         id:6,
-        title:'add a background',
-        imagesbkg: testbkg6
+        title:'closet header',
+        imagesbkg: closetheader
+    },
+    {
+        id:7,
+        title:'closet headerblue',
+        imagesbkg:closetheaderblue
+    },
+    {
+        id:8,
+        title:'consultation bkg remove',
+        imagesbkg:consultationbkgremove
+    },
+    {
+        id:9,
+        title:'Add an image',
+        imagesbkg:''
     }
 ]
 

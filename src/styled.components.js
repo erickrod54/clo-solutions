@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
-export const MainButton = styled.a`
-margin:2rem;
-padding: 2rem;
+export const MainButton = styled.div`
+margin:4rem;
+padding: 4rem;
 
     .main-button {
-        border-radius: 0.75rem;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 0.25rem;
         border: 1px solid var(--color-fifth-dark);
         background-color: var(--color-fifth);
         margin-left: var(--font-size-title);
