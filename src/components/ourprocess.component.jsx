@@ -148,7 +148,7 @@ const TestimonialsWrapper = styled.section`
 
     .testimonials-card--front h2{
     background-color: var(--color-secondary-light);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding: 1rem;
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
