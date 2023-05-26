@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const MainButton = styled.div`
-margin:4rem;
-padding: 4rem;
+margin:3rem;
+padding: 3rem;
 
     .main-button {
         margin: 1rem;

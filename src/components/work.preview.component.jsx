@@ -72,7 +72,7 @@ const WorkPreviewWrapper = styled.section`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    box-shadow: 5px 5px 5px 5px #222 ;  
+    box-shadow: 5px 5px 5px 5px #222;  
     position: absolute;
     top: 0;
     left: 0;
@@ -91,6 +91,7 @@ const WorkPreviewWrapper = styled.section`
     .testimonials-card--front h2,
     .testimonials-card--back h2{
     background-color: var(--color-secondary-light);
+    font-size: 1.2rem;
     padding: 1rem;
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;

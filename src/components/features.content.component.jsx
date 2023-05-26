@@ -24,7 +24,7 @@ const FeaturesContent = () => {
 
     return(
         <ConsultationWrapper id="features-content" consultationbkg={consultationbkg} consultationbkgremove={consultationbkgremove}>
-            <MainButton>
+            <MainButton className="features-content--consultation--btn">
             <a href="https://drive.google.com/file/d/17rVGmTzVqXXsRGdY1d1SayjV9nt7tsD3/view?usp=sharing" className="main-button" target="_blank" rel="noopener noreferrer">download our services sheet</a>
             </MainButton>
         </ConsultationWrapper>
@@ -42,7 +42,11 @@ const ConsultationWrapper = styled.section`
 
     @media screen and (max-width:600px){
         background-image: url(${({consultationbkgremove}) => consultationbkgremove});
-        background-size: 45rem;
+        background-size: 37rem;
+
+        .features-content--consultation--btn a{ 
+            font-size: 1.3rem;
+        }
     }
 `
 
