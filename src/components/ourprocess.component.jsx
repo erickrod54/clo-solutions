@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useCloContext } from "../context";
+import Maintitle from "./main.title.component";
 
 /**
  * 
@@ -38,6 +39,8 @@ const OurProcess = () => {
 
 
     return(
+        <>
+        <Maintitle title={<h2>Our process</h2>}/>
         <TestimonialsWrapper id="ourprocess" bkg1={bkg1} bkg2={bkg2} bkg3={bkg3} bkg4={bkg4} bkg5={bkg5} bkg6={bkg6}>
         {testData.map((card) => {
             const { id, title, icon, description } = card
@@ -79,6 +82,8 @@ const OurProcess = () => {
             )
         })}
     </TestimonialsWrapper>
+        
+        </>
 
         /**
          * <section id="ourprocess">
@@ -154,7 +159,13 @@ const TestimonialsWrapper = styled.section`
     border-bottom-left-radius: 50%;
     }
 
+    ul li img {
+        background-color: var(--color-sixth);
+        border-radius: 50%;
+    }
+
     .testimonials-card--back p{
+    color: var(--font-color-brown-dark);
     place-self: center;
     font-size: 2rem;
     font-weight: 400;

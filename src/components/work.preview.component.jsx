@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { useCloContext } from "../context";
 
-
 const WorkPreview = () => {
 
     const { organizationBkgImages } = useCloContext();
@@ -21,6 +20,8 @@ const WorkPreview = () => {
     const wardrobeafter = organizationBkgImages[4].imagesbackbkg;
 
     return(
+        <>
+        
         <WorkPreviewWrapper id="work-preview" 
             closetbefore={closetbefore} 
             closetafter={closetafter} 
@@ -47,12 +48,7 @@ const WorkPreview = () => {
             )
         })}
     </WorkPreviewWrapper>
-
-        /**
-         * <section id="ourprocess">
-            <h2>Our process section</h2>
-        </section>
-         */
+        </>
     )
 }
 

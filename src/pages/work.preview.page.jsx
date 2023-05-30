@@ -1,14 +1,184 @@
 import React from "react";
+import styled from "styled-components";
+import Maintitle from "../components/main.title.component";
+import { useCloContext } from "../context";
+
 
 const WorkPreviewPage = () => {
 
+    const { organizationBkgImages } = useCloContext();
+
+    console.log('organizationBkgImages in the page! ==> ', organizationBkgImages)
+
+    const closetbefore = organizationBkgImages[0].imagesfrontbkg;
+    const closetafter = organizationBkgImages[0].imagesbackbkg;
+    const hamperbefore = organizationBkgImages[1].imagesfrontbkg;
+    const hamperafter = organizationBkgImages[1].imagesbackbkg;
+    const kitchendrawerbefore = organizationBkgImages[2].imagesfrontbkg;
+    const kitchendrawerafter = organizationBkgImages[2].imagesbackbkg;
+    const kitchencabinetsbefore = organizationBkgImages[3].imagesfrontbkg;
+    const kitchencabinetsafter = organizationBkgImages[3].imagesbackbkg;
+    const wardrobebefore = organizationBkgImages[4].imagesfrontbkg;
+    const wardrobeafter = organizationBkgImages[4].imagesbackbkg;
+
     return(
-        <section id='work-preview-page'>
-            <div className="work-preview--content">
-            <h2>Work Preview</h2>
+        <>
+        <Maintitle title={<h2>Some of my work</h2>}/>
+        <WorkPreviewWrapper id="work-preview-page" 
+            closetbefore={closetbefore} 
+            closetafter={closetafter} 
+            hamperbefore={hamperbefore} 
+            hamperafter={hamperafter} 
+            kitchendrawerbefore={kitchendrawerbefore} 
+            kitchendrawerafter={kitchendrawerafter} 
+            kitchencabinetsbefore={kitchencabinetsbefore} 
+            kitchencabinetsafter={kitchencabinetsafter}
+            wardrobebefore={wardrobebefore}
+            wardrobeafter={wardrobeafter}>
+            
+        {organizationBkgImages.map((card) => {
+            const { id, title, titleback } = card
+            return(
+                <div key={id} className="work-preview-page-card">
+                <div className="work-preview-page-card--front">
+                    <h2 className="work-preview-page-card--title">{title}</h2>
+                </div>
+                <div className="work-preview-page-card--back">
+                    <h2 className="work-preview-page-card--title">{titleback}</h2>
+                </div>
             </div>
-        </section>
+            )
+        })}
+    </WorkPreviewWrapper>
+        </>
     )
 }
+
+const WorkPreviewWrapper = styled.section`
+
+   .work-preview-page-card{
+    width: 28rem;
+    height: 50rem;
+    position: relative;
+    }
+
+    .work-preview-page-card--front,
+    .work-preview-page-card--back,
+    .work-preview-page-card:first-child .work-preview-page-card--front::before,
+    .work-preview-page-card:nth-child(2) .work-preview-page-card--front::before,
+    .work-preview-page-card:nth-child(3) .work-preview-page-card--front::before,
+    .work-preview-page-card:nth-child(4) .work-preview-page-card--front::before,
+    .work-preview-page-card:nth-child(5) .work-preview-page-card--front::before{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 5px 5px 5px 5px #222;  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 2s ease-in-out;
+    backface-visibility: hidden;
+    transform: perspective(100rem);
+
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    padding: 3rem;
+    }
+
+    .work-preview-page-card--front h2,
+    .work-preview-page-card--back h2{
+    background-color: var(--color-secondary-light);
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    }
+
+    .work-preview-page-card--back p{
+    place-self: center;
+    font-size: 2rem;
+    font-weight: 400;
+    }
+
+    .work-preview-page-card:first-child .work-preview-page-card--front::before{
+        content: "";
+        opacity: 0.5; /* Set the opacity of the background image */
+        z-index: -1; /* Send the background image behind the text */
+        background-image: url(${({closetbefore}) => closetbefore});
+    }
+
+    .work-preview-page-card:first-child .work-preview-page-card--back{
+        content: "";
+        background-image: url(${({closetafter}) => closetafter});
+    }
+
+    .work-preview-page-card:nth-child(2) .work-preview-page-card--front::before{
+        content: "";
+        opacity: 0.5; /* Set the opacity of the background image */
+        z-index: -1; /* Send the background image behind the text */
+        background-image: url(${({hamperbefore}) => hamperbefore});
+    }
+
+    .work-preview-page-card:nth-child(2) .work-preview-page-card--back{
+        content: "";
+        background-image: url(${({hamperafter}) => hamperafter});
+    }
+
+    .work-preview-page-card:nth-child(3) .work-preview-page-card--front::before{
+        content: "";
+        opacity: 0.5; /* Set the opacity of the background image */
+        z-index: -1; /* Send the background image behind the text */
+        background-image: url(${({kitchendrawerbefore}) => kitchendrawerbefore});
+    }
+
+    .work-preview-page-card:nth-child(3) .work-preview-page-card--back{
+        content: "";
+        background-image: url(${({kitchendrawerafter}) => kitchendrawerafter});
+    }
+    
+
+    .work-preview-page-card:nth-child(4) .work-preview-page-card--front::before{
+        content: "";
+        opacity: 0.5; /* Set the opacity of the background image */
+        z-index: -1; /* Send the background image behind the text */
+        background-image: url(${({kitchencabinetsbefore}) => kitchencabinetsbefore});
+    }
+
+    .work-preview-page-card:nth-child(4) .work-preview-page-card--back{
+        content: "";
+        background-image: url(${({kitchencabinetsafter}) => kitchencabinetsafter});
+    }
+
+    .work-preview-page-card:nth-child(5) .work-preview-page-card--front::before{
+        content: "";
+        opacity: 0.5; /* Set the opacity of the background image */
+        z-index: -1; /* Send the background image behind the text */
+        background-image: url(${({wardrobebefore}) => wardrobebefore});
+    }
+
+    .work-preview-page-card:nth-child(5) .work-preview-page-card--back{
+        content: "";
+        background-image: url(${({wardrobeafter}) => wardrobeafter});
+    }
+
+    .work-preview-page-card--back {
+    /*this prop using 'rotateY'  is related with 'backface-visibility: hidden;'*/
+    /*the 'perspective(100rem)' with hover will make the 3d effect**/
+    transform: perspective(100rem) rotateY(0.5turn); 
+    }
+
+    /*the 'perspective(100rem)' with hover will make the 3d effect - 0.5turn = 180deg**/
+    .work-preview-page-card:hover .work-preview-page-card--front{
+    transform: perspective(100rem) rotateY(0.5turn);
+    }
+
+    /*the 'perspective(100rem)' with hover will make the 3d effect**/
+    .work-preview-page-card:hover .work-preview-page-card--back{
+    transform: perspective(100rem) rotateY(1turn);
+    }
+`
 
 export default WorkPreviewPage;

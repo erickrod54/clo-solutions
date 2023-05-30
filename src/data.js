@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight, faFaceSmile, faPersonChalkboard, faPeopleRoof, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
-import { checkmark, closetafter, closetbefore, closetheader, closetheaderblue, consultationbkg, consultationbkgremove, hamperafter, hamperbefore, kitchencabinetsafter, kitchencabinetsbefore, kitchendrawerafter, kitchendrawerbefore, testbkg1, testbkg2, testbkg3, testbkg4, testbkg6, wardrobeafter, wardrobebefore } from "./assets/index.assets";
+import { checkmark, closetafter, closetbefore, closetheader, closetheaderblue, consultationbkg, consultationbkgremove, hamperafter, hamperbefore, kitchencabinetsafter, kitchencabinetsbefore, kitchendrawerafter, kitchendrawerbefore, testbkg1, testbkg2, testbkg3, testbkg4, wardrobeafter, wardrobebefore } from "./assets/index.assets";
 
 /***
  * 
@@ -164,6 +164,68 @@ export const backgroundsImages = [
     }
 ]
 
+export const servicesData = [
+    /**
+     * {
+      id: 1,
+      title: 'services',
+    },
+     */
+    {
+      id: 2,
+      title: 'Free Consultation',
+      description: 'We always offer free consultations. We can schedule a phone call to discuss your needs, priorities, goals, and challenges so that we can delve into them together.',
+      price: '45'
+    },
+    {
+      id: 3,
+      title: 'Shopping Service',
+      services: [
+        {
+          id: 1,
+          title: 'physical store',
+          description: 'We offer assistance in purchasing storage supplies and furniture according to your needs and preferences.',
+          price: '65'
+        },
+        {
+          id: 2,
+          title: 'online',
+          description: 'We offer assistance in purchasing storage supplies and furniture according to your needs and preferences.',
+          price: '65'
+        }
+      ]
+    },
+    {
+      id: 4,
+      title: 'Organization and Decluttering Service',
+      services: [
+        {
+          id: 1,
+          title: 'regular spaces',
+          description: 'per organizer.',
+          price: '75'
+        },
+        {
+          id: 2,
+          title: 'garage',
+          description: 'We use from 2 to 3 organizer experts.',
+          price: '95'
+        }
+      ]
+    },
+    {
+      id: 5,
+      title: 'Unpacking Service (Move-in Ready)',
+      description: 'We provide an unpacking service where we carefully unpack and store your belongings, allowing you to settle into your new space without stress, with peace of mind, and in a quick and efficient manner.',
+      price: '75'
+    },
+    {
+      id: 6,
+      title: 'Maintenance Service',
+      description: 'We offer this service to our recurring clients, providing a discount for maintaining the previously decluttered and organized space.',
+      price: '55'
+    }
+  ];
 /**organization backgrounds */
 
 export const organizationBkgImages = [
@@ -198,17 +260,19 @@ export const organizationBkgImages = [
     {
         id:5,
         title:'wardrobe before',
-        titleback:'',
+        titleback:'wardrobe after',
         imagesfrontbkg: wardrobebefore,
         imagesbackbkg: wardrobeafter
     },
-    {
+   /**
+    *  {
         id:6,
         title:'add a background',
         titleback:'',
         imagesfrontbkg: testbkg6,
         imagesbackbkg:''
     }
+    */
 ]
 
 

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { aboutUsData, backgroundsImages, cloIcons, DailyPhrases, leftquote, MainMessage, mainNavLinks, organizationBkgImages, ourProcessIcons, testData } from "./data";
+import { aboutUsData, backgroundsImages, cloIcons, DailyPhrases, leftquote, MainMessage, mainNavLinks, organizationBkgImages, ourProcessIcons, servicesData, testData } from "./data";
+
 
 export const CloContext = React.createContext()
 
@@ -17,7 +18,8 @@ export const CloProvider = ({ children }) => {
                 backgroundsImages,
                 testData,
                 ourProcessIcons,
-                organizationBkgImages
+                organizationBkgImages,
+                servicesData
              }}>
             {children}
         </CloContext.Provider>

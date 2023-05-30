@@ -16,7 +16,7 @@
  }
  
  body{
-   font-family: 'Julius Sans One', sans-serif;
+   font-family: 'Cinzel', serif;
    line-height: 1.7;
    background-color: var(--color-primary);
  }
@@ -185,7 +185,13 @@
   background-color: var(--color-tertiary-dark);
   padding: 4rem;
   margin: 4rem;
-  height: 100vh;
+  
+ }
+
+ section#main-title-pages{
+  display: grid;
+  place-content: center;
+  grid-column: container-start / container-end;
  }
 
  .services-and-pricing-page--content,
@@ -194,7 +200,14 @@
     display: grid;
     margin: .2rem;
     justify-content: center;
-    background-color: var(--color-secondary-light);
+    background-color: var(--clr-white);
+    border-radius: 0.75rem;
+    border:2px solid var(--color-sixth);
+ }
+
+ .services-and-pricing-page--content div{
+    margin: 2rem;
+    padding: 2rem;
  }
  
 
@@ -250,13 +263,18 @@
 
  /*Our process section **/
  section#ourprocess,
- section#work-preview{ 
+ section#work-preview,
+ section#work-preview-page{ 
     grid-column: center-start / center-end;
     padding: var(--padding-section);
     place-content: center;
     display: grid;
     grid-template-columns: repeat(4, 28rem);
     grid-gap: 5rem;
+ }
+ 
+ section#work-preview-page{
+  grid-template-columns: repeat(3, 28rem);
  }
 
  /*features content ----**/
@@ -307,6 +325,10 @@
 
     section#events-text{
       display: none;
+    }
+
+    section#main-title-pages{
+      grid-column: center-start / center-end;
     }
 
     section#events-content{ 

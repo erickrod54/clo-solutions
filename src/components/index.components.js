@@ -6,6 +6,7 @@ import LogoComponent from "./logo.component";
 import HeaderContent from "./header.content.component";
 import OurProcess from "./ourprocess.component";
 import WorkPreview from "./work.preview.component";
+import Maintitle from "./main.title.component";
 
 
-export { HeaderComponent, EventsComponent, FeaturesComponent, FooterComponent, LogoComponent, HeaderContent, OurProcess, WorkPreview }
+export { HeaderComponent, EventsComponent, FeaturesComponent, FooterComponent, LogoComponent, HeaderContent, OurProcess, WorkPreview, Maintitle }
