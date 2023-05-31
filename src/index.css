@@ -345,7 +345,7 @@
      }
 
     section#ourprocess,
-    section#work-preview{ 
+    section#work-preview-page{ 
       grid-template-columns: repeat(auto-fit, 28rem);
     }
 }

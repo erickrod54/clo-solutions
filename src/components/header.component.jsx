@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useCloContext } from "../context";
 import { Link } from 'react-router-dom';
@@ -21,20 +21,51 @@ const HeaderComponent = () => {
     
     const { mainNavLinks } = useCloContext()
 
+    // eslint-disable-next-line
+    const [background, setBackground] = useState('nav-links');
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleCheckboxChange = () => {
+        setIsChecked(!isChecked);
+        console.log('value of checkbox ==>', isChecked)
+      };
+
+    useEffect(() => {
+        const handleScroll = () => {
+          const currentScrollY = window.scrollY;
+          if (currentScrollY < 0) {
+            setBackground('nav-links nav-links--scroll-down');
+          } else {
+            setBackground('nav-links');
+          }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
+    
+      function handleHomeLinkClick() {
+        const windowHeight = window.innerHeight; // Get the height of the viewport
+        window.scrollTo({
+          top: windowHeight / 2, // Scroll to half of the viewport height
+          behavior: "smooth"
+        });
+      }   
+
     return(
         <header id="header">
             <WrapperHeader>
             <nav className="header_main-nav">
-                <input type='checkbox' />
+                <input type='checkbox'  checked={isChecked} onChange={handleCheckboxChange}/>
                 <div className="header_main-nav--hamburger" ><div></div></div>
-                <div className="header_main-nav--menu">
+                <div className="header_main-nav--menu"> 
                     <div>
                         <div>
                             {mainNavLinks.map((link) => {
                                 const {id, linkname, url } = link;
                                 return(
                                     <ul key={id}>
-                                        <li><Link to={url}>{linkname}</Link></li>
+                                        <li><Link to={url} onClick={() => {handleHomeLinkClick(); handleCheckboxChange(); }} >{linkname}</Link></li>
                                     </ul>
                                 )
                             })}
