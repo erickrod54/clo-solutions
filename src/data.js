@@ -231,36 +231,36 @@ export const servicesData = [
 export const organizationBkgImages = [
     {
         id:1,
-        title:'closet before',
-        titleback:'closet after',
+        title:'Closet before',
+        titleback:'Closet after',
         imagesfrontbkg: closetbefore,
         imagesbackbkg: closetafter
     },
     {
         id:2,
-        title:'hamper before',
-        titleback:'hamper after',
+        title:'Hamper before',
+        titleback:'Hamper after',
         imagesfrontbkg: hamperbefore,
         imagesbackbkg: hamperafter
     },
     {
         id:3,
-        title:'kitchen drawer before',
-        titleback:'kitchen drawer after',
+        title:'Kitchen drawer before',
+        titleback:'Kitchen drawer after',
         imagesfrontbkg: kitchendrawerbefore,
         imagesbackbkg: kitchendrawerafter
     },
     {
         id:4,
-        title:'kitchen cabinets before',
-        titleback:'kitchen cabinets after',
+        title:'Kitchen cabinets before',
+        titleback:'Kitchen cabinets after',
         imagesfrontbkg: kitchencabinetsbefore,
         imagesbackbkg: kitchencabinetsafter
     },
     {
         id:5,
-        title:'wardrobe before',
-        titleback:'wardrobe after',
+        title:'Laundry before',
+        titleback:'Laundry after',
         imagesfrontbkg: wardrobebefore,
         imagesbackbkg: wardrobeafter
     },

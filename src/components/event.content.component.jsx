@@ -23,7 +23,7 @@ const EventsContent = () => {
             <div className="events-content-para">
                 <p>{aboutUsTextSlice}{aboutUsTextSliceFinal}</p>
                     <Link to='/about-us' className="main-button">
-                        know more about us
+                        Know more about us
                     </Link>
             </div>
         </section>

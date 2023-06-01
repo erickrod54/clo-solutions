@@ -58,6 +58,7 @@ const ServicesAndPricingWrapper = styled.section`
     }
 
     .sub-service{
+        text-transform: capitalize;
         text-decoration: underline;
         font-size: 1.5rem;
         text-shadow:var(--color-fifth);

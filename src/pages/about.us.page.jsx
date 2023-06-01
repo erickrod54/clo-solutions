@@ -45,7 +45,7 @@ const AboutUs = () => {
 const AboutUsWrapper = styled.section`
 
     p{
-        margin: 2rem;
+        margin: 0.4rem;
         padding: 2rem;
         color: var(--font-color-brown-dark);
     }

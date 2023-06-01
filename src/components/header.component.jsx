@@ -355,7 +355,7 @@ const WrapperHeader = styled.div`
 
     .header_logo-content--para{
         font-weight: 500;
-        padding: 2vh 2rem 6vh var(--font-size-title);
+        padding: 1.5vh 1.5rem 6vh var(--font-size-title);
         color: var(--font-color-brown-m-ligth);
     }
 

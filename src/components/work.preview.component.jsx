@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { useCloContext } from "../context";
+import { Maintitle } from './index.components';
+
 
 const WorkPreview = () => {
 
@@ -21,7 +23,7 @@ const WorkPreview = () => {
 
     return(
         <>
-        
+        <Maintitle title={<h2>Work Preview</h2>}/>
         <WorkPreviewWrapper id="work-preview" 
             closetbefore={closetbefore} 
             closetafter={closetafter} 
