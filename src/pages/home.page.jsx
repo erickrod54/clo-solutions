@@ -16,9 +16,9 @@ const HomePage = () => {
 
 
                 <EventsComponent />
-                <OurProcess />
+                <OurProcess /> 
                 <FeaturesComponent />
-                <WorkPreview />               
+                <WorkPreview />                
                 
             
         </>
