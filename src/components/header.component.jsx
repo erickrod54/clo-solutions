@@ -85,7 +85,8 @@ const HeaderComponent = () => {
 }
 
 const WrapperHeader = styled.div`
-
+    
+    
         /*Nav**/
     /*position fixed makes the navigation fixed
     *to the scroll behavior**/
