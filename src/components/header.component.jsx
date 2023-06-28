@@ -116,23 +116,30 @@ const WrapperHeader = styled.div`
 
     /*this hamburger style is on top of the checkbox
     *so the user won't see the checkbox **/
-    .header_main-nav--hamburger{
-    position: absolute;
-    top: 3rem;
-    left: 3rem;
-    height: 5rem;
-    width: 5rem;
-    padding: 1rem;
-    background-color: var(--color-secondary);
-    /*places the hamburger on top*/
-    z-index: 2;
+    .header_main-nav--hamburger {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  height: 5rem;
+  width: 5rem;
+  border: 2px solid var(--color-sixth);
+  padding: 1rem;
+  background: linear-gradient(to right, var(--color-sixth), #ffa800);
+  /* Places the hamburger on top */
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  /* Hamburger animation */
+  animation: main-nav 2s;
+  /* Background transition */
+  transition: background 1s;
+}
 
-    display: grid;
-    place-items: center;
+.header_main-nav--hamburger:hover {
+  background: linear-gradient(to right, #ffa800, var(--color-sixth));
+}
 
-    /*hamburger animation**/
-    animation: main-nav 2s;
-    }
+
 
     /*hamburger animation**/
     @keyframes main-nav{
@@ -323,7 +330,7 @@ const WrapperHeader = styled.div`
     }
 
     .header_logo-content--quatation-container{
-        
+    
         border: 1.5px solid var(--color-sixth);
         border-radius: .75rem;
         margin: 1.5rem;
@@ -348,6 +355,7 @@ const WrapperHeader = styled.div`
 
     .header_logo-content--quatation-container{
         display: flex;
+       
     }
 
     i{

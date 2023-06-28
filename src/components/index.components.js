@@ -7,6 +7,7 @@ import HeaderContent from "./header.content.component";
 import OurProcess from "./ourprocess.component";
 import WorkPreview from "./work.preview.component";
 import Maintitle from "./main.title.component";
+import SocialComponent from "./social.section.component";
+import EmailForm from "./contact.component";
 
-
-export { HeaderComponent, EventsComponent, FeaturesComponent, FooterComponent, LogoComponent, HeaderContent, OurProcess, WorkPreview, Maintitle }
+export { HeaderComponent, EventsComponent, FeaturesComponent, FooterComponent, LogoComponent, HeaderContent, OurProcess, WorkPreview, Maintitle, SocialComponent, EmailForm }

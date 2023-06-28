@@ -18,6 +18,7 @@ const FooterComponent = () => {
         <Wrapper>
             <p>&copy; { new Date().getFullYear()}</p>
             <span> Clo Solutions  |  Organization Services </span>
+            <p>Free consultation Phone: <strong> +1 (754) 7796474</strong></p>
             <p>  All Rights reserved</p>
         </Wrapper>
       </section>

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useCloContext } from "../context";
 import { MainButton } from "../styled.components";
+import { Link } from 'react-router-dom';
 
 /**vlv-villages version 1.04 - FeaturesContent  -
  * Features:
@@ -25,7 +26,7 @@ const FeaturesContent = () => {
     return(
         <ConsultationWrapper id="features-content" consultationbkg={consultationbkg} consultationbkgremove={consultationbkgremove}>
             <MainButton className="features-content--consultation--btn">
-            <a href="https://drive.google.com/file/d/17rVGmTzVqXXsRGdY1d1SayjV9nt7tsD3/view?usp=sharing" className="main-button" target="_blank" rel="noopener noreferrer">download our services sheet</a>
+            <Link to='/services-and-pricing' className="main-button">Checkout our services</Link>
             </MainButton>
         </ConsultationWrapper>
     )

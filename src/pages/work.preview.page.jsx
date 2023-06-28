@@ -6,9 +6,10 @@ import { useCloContext } from "../context";
 
 const WorkPreviewPage = () => {
 
-    const { organizationBkgImages } = useCloContext();
+    const { organizationBkgImages, myWorkIcons } = useCloContext();
 
-    console.log('organizationBkgImages in the page! ==> ', organizationBkgImages)
+    console.log('myWorkIcons ==> ', myWorkIcons)
+    //console.log('organizationBkgImages in the page! ==> ', organizationBkgImages)
 
     const closetbefore = organizationBkgImages[0].imagesfrontbkg;
     const closetafter = organizationBkgImages[0].imagesbackbkg;
@@ -21,35 +22,42 @@ const WorkPreviewPage = () => {
     const wardrobebefore = organizationBkgImages[4].imagesfrontbkg;
     const wardrobeafter = organizationBkgImages[4].imagesbackbkg;
 
+    /**icons */
+    const handpointer = myWorkIcons[2].icon;
+
     return(
         <>
         <Maintitle title={<h2>Some of my work</h2>}/>
-        <WorkPreviewWrapper id="work-preview-page" 
-            closetbefore={closetbefore} 
-            closetafter={closetafter} 
-            hamperbefore={hamperbefore} 
-            hamperafter={hamperafter} 
-            kitchendrawerbefore={kitchendrawerbefore} 
-            kitchendrawerafter={kitchendrawerafter} 
-            kitchencabinetsbefore={kitchencabinetsbefore} 
-            kitchencabinetsafter={kitchencabinetsafter}
-            wardrobebefore={wardrobebefore}
-            wardrobeafter={wardrobeafter}>
-            
-        {organizationBkgImages.map((card) => {
-            const { id, title, titleback } = card
-            return(
-                <div key={id} className="work-preview-page-card">
-                <div className="work-preview-page-card--front">
-                    <h2 className="work-preview-page-card--title">{title}</h2>
+        <div className="work-preview-page--container">
+            <WorkPreviewWrapper id="work-preview-page" 
+                closetbefore={closetbefore} 
+                closetafter={closetafter} 
+                hamperbefore={hamperbefore} 
+                hamperafter={hamperafter} 
+                kitchendrawerbefore={kitchendrawerbefore} 
+                kitchendrawerafter={kitchendrawerafter} 
+                kitchencabinetsbefore={kitchencabinetsbefore} 
+                kitchencabinetsafter={kitchencabinetsafter}
+                wardrobebefore={wardrobebefore}
+                wardrobeafter={wardrobeafter}>
+                
+            {organizationBkgImages.map((card) => {
+                const { id } = card
+                return(
+                    <div key={id} className="work-preview-page-card">
+                    <div className="work-preview-page-card--front">
+                        <h2><i>{handpointer}</i></h2>
+                        {/**<h2 className="work-preview-page-card--title"><i>{wandmagicsparkles}</i>{title}</h2> */}
+                    </div>
+                    <div className="work-preview-page-card--back">
+                         {/**<h2 className="work-preview-page-card--title"><i>{sparkles}</i>{titleback}</h2> */}
+                    </div>
                 </div>
-                <div className="work-preview-page-card--back">
-                    <h2 className="work-preview-page-card--title">{titleback}</h2>
-                </div>
-            </div>
-            )
-        })}
-    </WorkPreviewWrapper>
+                )
+            })}
+        </WorkPreviewWrapper>
+
+        </div>
         </>
     )
 }
@@ -89,7 +97,7 @@ const WorkPreviewWrapper = styled.section`
     }
 
     .work-preview-page-card--front h2,
-    .work-preview-page-card--back h2{
+   .work-preview-page-card--back h2{
     background-color: var(--color-secondary-light);
     font-size: 1.2rem;
     padding: 1rem;
@@ -97,7 +105,45 @@ const WorkPreviewWrapper = styled.section`
     border-bottom-left-radius: 50%;
     }
 
-    .work-preview-page-card--back p{
+    .work-preview-page-card--front h2,
+    .work-preview-page-card--back h2{
+    background-color: var(--color-secondary-light);
+    font-size: 1.2rem;
+    padding: 2.5rem;
+   
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    }
+
+    
+    .work-preview-page-card--back h2{
+    background-color: var(--color-sixth);
+    font-size: 1.2rem;
+    padding: 2.5rem;
+    
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    }
+
+    .work-preview-page-card--back .work-preview-page-card--title i{
+        color: var(--color-secondary);
+    }
+
+    .work-preview-page-card--title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    .work-preview-page-card--title i {
+        
+        margin-right: 0.5rem; /* Adjust the spacing between the icon and title as needed */
+        }
+
+
+
+   .work-preview-page-card--back p{
     place-self: center;
     font-size: 2rem;
     font-weight: 400;

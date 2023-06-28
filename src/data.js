@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faQuoteLeft, faQuoteRight, faFaceSmile, faPersonChalkboard, faPeopleRoof, faCalendarDays } from '@fortawesome/free-solid-svg-icons';
+import { faQuoteLeft, faQuoteRight, faFaceSmile, faPersonChalkboard, faPeopleRoof, faCalendarDays, faMagicWandSparkles, faSprayCanSparkles, faHandPointer } from '@fortawesome/free-solid-svg-icons';
 import { checkmark, closetafter, closetbefore, closetheader, closetheaderblue, consultationbkg, consultationbkgremove, hamperafter, hamperbefore, kitchencabinetsafter, kitchencabinetsbefore, kitchendrawerafter, kitchendrawerbefore, testbkg1, testbkg2, testbkg3, testbkg4, wardrobeafter, wardrobebefore } from "./assets/index.assets";
-
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 /***
  * 
  * 
@@ -24,6 +24,14 @@ export const freeconsultation = <FontAwesomeIcon icon={faCalendarDays} />
 export const firstvisit = <FontAwesomeIcon icon={faPeopleRoof} />
 export const organizationday = <FontAwesomeIcon icon={faPersonChalkboard} />
 export const enjoy = <FontAwesomeIcon icon={faFaceSmile} />
+
+/**icons workpreview */
+export const wandmagicsparkles = <FontAwesomeIcon icon={faMagicWandSparkles} />
+export const sparkles = <FontAwesomeIcon icon={faSprayCanSparkles} />
+export const handpointer = <FontAwesomeIcon icon={faHandPointer} />
+
+export const facebook = <FontAwesomeIcon icon={faFacebook} />
+export const instagram = <FontAwesomeIcon icon={faInstagram} />
 
 export const cloIcons = [
     {
@@ -51,7 +59,7 @@ export const mainNavLinks = [
     },
     {
         id:2,
-        linkname:'services and pricing',
+        linkname:'our services',
         url:'/services-and-pricing'
     },
     {
@@ -110,6 +118,39 @@ export const ourProcessIcons = [
         name:'Enjoy',
         icon:enjoy
     
+    }
+]
+
+export const brandIcons = [
+    {
+        id:1,
+        title:'facebook',
+        socialicons: facebook,
+        url:'https://www.facebook.com/people/Clo-Solutions/100091465825398/?mibextid=LQQJ4d'
+    },
+    {
+        id:2,
+        title:'instagram',
+        socialicons: instagram,
+        url:'https://www.instagram.com/clo.solutions/?igshid=OGQ5ZDc2ODk2ZA%3D%3D'
+    },
+]
+
+export const myWorkIcons = [ 
+    {
+        id:1,
+        name:'wand magic sparkles',
+        icon:wandmagicsparkles
+    },
+    {
+        id:2,
+        name:'sparkles',
+        icon:sparkles
+    },
+    {
+        id:3,
+        name:'hand pointer',
+        icon:handpointer
     }
 ]
 /**test component data ---- start--*/
@@ -175,10 +216,17 @@ export const servicesData = [
       id: 2,
       title: 'Free Consultation',
       description: 'We always offer free consultations. We can schedule a phone call to discuss your needs, priorities, goals, and challenges so that we can delve into them together.',
-      price: '45'
+     
     },
     {
-      id: 3,
+        id: 3,
+        title: 'First visit',
+        description: 'Here we will meet and discuss which system best suits your needs.We will analyze and take measurements of the spaces to be organized.Together, we will design a plan to carry out your project.',
+        note:'If approved we will give you a credit as a return of this service to the invoice.',
+        price: '45'
+    },
+    {
+      id: 4,
       title: 'Shopping Service',
       services: [
         {
@@ -191,39 +239,39 @@ export const servicesData = [
           id: 2,
           title: 'online',
           description: 'We offer assistance in purchasing storage supplies and furniture according to your needs and preferences.',
-          price: '65'
+          price: '45'
         }
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: 'Organization and Decluttering Service',
       services: [
         {
           id: 1,
           title: 'regular spaces',
           description: 'per organizer.',
-          price: '75'
+          price: '105'
         },
         {
           id: 2,
           title: 'garage',
           description: 'We use from 2 to 3 organizer experts.',
-          price: '95'
+          price: '85'
         }
       ]
     },
     {
-      id: 5,
+      id: 6,
       title: 'Unpacking Service (Move-in Ready)',
       description: 'We provide an unpacking service where we carefully unpack and store your belongings, allowing you to settle into your new space without stress, with peace of mind, and in a quick and efficient manner.',
-      price: '75'
+      price: '105'
     },
     {
-      id: 6,
+      id: 7,
       title: 'Maintenance Service',
       description: 'We offer this service to our recurring clients, providing a discount for maintaining the previously decluttered and organized space.',
-      price: '55'
+      price: '85'
     }
   ];
 /**organization backgrounds */

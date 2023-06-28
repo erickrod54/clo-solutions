@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useCloContext } from "../context";
-//import { MainButton } from "../styled.components";
 
 const EventsContent = () => {
 
@@ -9,9 +8,9 @@ const EventsContent = () => {
     //console.log(' aboutUsData ==>', aboutUsData);
 
     const aboutUsText = aboutUsData[0].text;
-    const aboutUsTextSlice = aboutUsText.slice(0,240);
+    const aboutUsTextSlice = aboutUsText.slice(0,361);
     //const aboutUsTextLength = aboutUsText.length;
-    const aboutUsTextSliceFinal = aboutUsText.slice(1067,1400);
+    const aboutUsTextSliceFinal = aboutUsText.slice(1055,1400);
 
     //console.log(' aboutUsTextLength ==>', aboutUsTextLength);
 
@@ -21,9 +20,9 @@ const EventsContent = () => {
     return(
         <section id="events-content">
             <div className="events-content-para">
-                <p>{aboutUsTextSlice}{aboutUsTextSliceFinal}</p>
+                <p>{aboutUsTextSlice} ,  {aboutUsTextSliceFinal}</p>
                     <Link to='/about-us' className="main-button">
-                        Know more about us
+                        <p>About us</p>
                     </Link>
             </div>
         </section>

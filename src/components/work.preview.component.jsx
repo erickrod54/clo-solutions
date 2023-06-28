@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { useCloContext } from "../context";
 import { Maintitle } from './index.components';
 
-
 const WorkPreview = () => {
 
-    const { organizationBkgImages } = useCloContext();
+    const { organizationBkgImages, myWorkIcons } = useCloContext();
 
-    console.log('organizationBkgImages ==> ', organizationBkgImages)
+    console.log('myWorkIcons ==> ', myWorkIcons)
+    //console.log('organizationBkgImages ==> ', organizationBkgImages)
 
     const closetbefore = organizationBkgImages[0].imagesfrontbkg;
     const closetafter = organizationBkgImages[0].imagesbackbkg;
@@ -21,9 +21,14 @@ const WorkPreview = () => {
     const wardrobebefore = organizationBkgImages[4].imagesfrontbkg;
     const wardrobeafter = organizationBkgImages[4].imagesbackbkg;
 
+    /**icons */
+    const handpointer = myWorkIcons[2].icon;
+
     return(
         <>
         <Maintitle title={<h2>Work Preview</h2>}/>
+        <div className="work-preview--container">
+
         <WorkPreviewWrapper id="work-preview" 
             closetbefore={closetbefore} 
             closetafter={closetafter} 
@@ -37,24 +42,29 @@ const WorkPreview = () => {
             wardrobeafter={wardrobeafter}>
             
         {organizationBkgImages.filter( (card) => card.id <= 4).map((card) => {
-            const { id, title, titleback } = card
+            const { id } = card
             return(
                 <div key={id} className="testimonials-card">
                 <div className="testimonials-card--front">
-                    <h2 className="testimonials-card--title">{title}</h2>
+                    <h2 ><i>{handpointer}</i></h2> 
                 </div>
                 <div className="testimonials-card--back">
-                    <h2 className="testimonials-card--title">{titleback}</h2>
+                    {/**<h2 ><i>{handpointer}</h2> */}
                 </div>
             </div>
             )
         })}
     </WorkPreviewWrapper>
+
+        </div>
         </>
     )
 }
 
 const WorkPreviewWrapper = styled.section`
+margin: 2rem;
+padding: 2rem;
+
    .testimonials-card{
     width: 28rem;
     height: 50rem;
@@ -77,7 +87,7 @@ const WorkPreviewWrapper = styled.section`
     width: 100%;
     height: 100%;
     transition: all 2s ease-in-out;
-    backface-visibility: hidden;
+    backface-visibility: hidden; 
     transform: perspective(100rem);
 
     display: grid;
@@ -90,10 +100,38 @@ const WorkPreviewWrapper = styled.section`
     .testimonials-card--back h2{
     background-color: var(--color-secondary-light);
     font-size: 1.2rem;
-    padding: 1rem;
+    padding: 2.5rem;
+   
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
     }
+
+    
+    .testimonials-card--back h2{
+    background-color: var(--color-sixth);
+    font-size: 1.2rem;
+    padding: 2.5rem;
+    
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    }
+
+    .testimonials-card--back .testimonials-card--title i{
+        color: var(--color-secondary);
+    }
+
+    .testimonials-card--title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    .testimonials-card--title i {
+        
+        margin-right: 0.5rem; /* Adjust the spacing between the icon and title as needed */
+        }
+
 
     .testimonials-card--back p{
     place-self: center;

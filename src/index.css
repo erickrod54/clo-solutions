@@ -55,6 +55,9 @@
    --color-fifth-more-light:hsla(170, 67%, 96%, 1);
    
    --color-sixth:hsla(240, 41%, 63%, 1);
+   --color-sixth-lighter1: hsla(240, 41%, 73%, 1);
+   --color-sixth-lighter2: hsla(240, 41%, 83%, 1);
+  --color-sixth-lighter3: hsla(240, 41%, 93%, 1);
 
    --clr-black: #222;
 
@@ -73,6 +76,10 @@
  
    /*section Padding**/
    --padding-section: 8vh 3vw;
+
+   /*width for **/
+   --width-for-msg--container: calc(70rem + 1.2vw);
+   --width-for-msg--container-600: calc(40rem + 1.2vw); 
 
    /*color fonts**/
     --font-color-brown-dark:hsla(30, 23%, 20%, 1);
@@ -127,7 +134,7 @@
  
  i{
    margin: 0.6rem;
-   font-size: var(--font-size-title);
+   font-size: var(--font-size-para--600);
    color: var(--color-sixth);
  }
  
@@ -155,18 +162,48 @@ header#header::before {
  .header_logo-content--para{
     font-size: var(--font-size-daily-phrases);
 }
+
+.header_logo-content--quatation-container{
+  width: var(--width-for-msg--container);
+}
+
+.header_logo-content--content .header_logo-content--quatation-container p{
+  font-weight: 600;
+  
+}
+
+.header_logo-content--quatation-container p {
+  font-weight: 600;
+  background: linear-gradient(to right, var(--color-sixth), #ffa800);
+  background-clip: padding-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
  
  /*villas section ----**/
- section#work-preview{
-   background-color: var(--color-quarternary-light);
+ .work-preview--container{
+   
    grid-column: center-start / center-end;
+ }
+
+ section#ourprocess,
+ section#work-preview{
+  border-radius: 0.75rem;
+   border:2px solid var(--color-sixth);
+   background-color: var(--clr-white);
+   
  }
  
  /*events content ----**/
  section#events-content{ 
    background-color: var(--color-tertiary);
    grid-column: container-start / col-end 9;
- 
+   border:2px solid var(--color-sixth); 
+ }
+
+ section#events-content .events-content-para p{
+  line-height: 3.6rem;
  }
  
  /*events content ----**/
@@ -181,51 +218,76 @@ header#header::before {
    place-items: center;
  }
 
+ section#events-text{
+     border:2px solid var(--color-tertiary);
+     border-top-right-radius: 3rem;
+     border-bottom-right-radius: 3rem;
+     border-left: none;
+ }
+
+ 
  /*pages styles**/
  section#about-us-page,
  section#services-and-pricing-page,
  section#work-preview-page{
-  display: grid;
-  grid-column: container-start / container-end;
-  background-color: var(--color-tertiary-dark);
-  padding: 4rem;
-  margin: 4rem;
+   display: grid;
+   grid-column: container-start / container-end;
+   background-color: var(--color-tertiary-dark);
+   padding: 4rem;
+   margin: 4rem;
+   
+  }
+
+  .work-preview-page--container{
+    margin: 4rem;
+    padding: 2rem;
+    background-color: var(--color-tertiary);
+    grid-column: container-start / container-end;
+  }
+
+  section#work-preview-page{
+    border:2px solid var(--color-sixth);
+    background-color: var(--clr-white);
+    border-radius: 0.75rem;
+
+  }
   
- }
-
- section#main-title-pages{
-  display: grid;
-  place-content: center;
-  grid-column: container-start / container-end;
- }
-
- .services-and-pricing-page--content,
- .about-us-page--content,
- .work-preview--content{
+  section#main-title-pages{
+    display: grid;
+    place-content: center;
+    grid-column: container-start / container-end;
+  }
+  
+  .services-and-pricing-page--content,
+  .about-us-page--content,
+  .work-preview--content{
     display: grid;
     margin: .2rem;
     justify-content: center;
     background-color: var(--clr-white);
     border-radius: 0.75rem;
     border:2px solid var(--color-sixth);
- }
-
- .services-and-pricing-page--content div{
+  }
+  
+  .services-and-pricing-page--content div{
     margin: 2rem;
     padding: 2rem;
- }
- 
-
- .main-button {
-  width: 30rem;
-  border-radius: 0.75rem;
-  border: 1px solid var(--color-fifth-dark);
-  background-color: var(--color-fifth);
-  margin-left: var(--font-size-title);
-  margin-bottom: 5rem;
-  color: var(--font-color-brown-dark);
-  font-weight: 500;
-}
+  }
+  
+  
+  .main-button {
+    width: fit-content;
+    border-radius: 0.75rem;
+    border: 2.5px solid var(--color-fifth-dark);
+    background-color: var(--color-fifth);
+    margin-left: var(--font-size-title);
+    margin-bottom: 5rem;
+    font-weight: 600;
+  }
+  
+  .main-button p{ 
+    color: var(--font-color-brown-dark);
+  }
 
 .main-button:hover{
   background-color: var(--clr-white);
@@ -233,67 +295,96 @@ header#header::before {
   border-radius: 0.75rem;
   color: var(--color-sixth);
 }
- 
- .events-text--content,
- .features-text--content{
-    transform: rotate(90deg);
- }
 
- .events-text--title,
- .features-text--title{
+.events-text--content,
+.features-text--content{
+  transform: rotate(90deg);
+}
+
+.events-text--title,
+.features-text--title{
   margin: 1rem;
   padding: 1rem;
   font-size: var(--font-size-title-section);
   font-weight: 500;
   color: var(--clr-white);
   letter-spacing: 0.2rem;
- }
+}
 
- .events-content-para{
-    background-color: var( --color-secondary);
-    display: grid;
-    border-radius: 0.75rem;
-    margin: 2.5rem;
-    padding: 1rem;
-    place-content: center;
- }
+.events-content-para{
+  background: linear-gradient(to right, var(--color-secondary), var(--color-fifth));
+  display: grid;
+  border-radius: 0.75rem;
+  margin: 2.5rem;
+  padding: 1rem;
+  place-content: center;
+}
 
- .events-content-para > p{
+/*.events-content-para {
+  background: linear-gradient(to right, var(--color-secondary), var(--color-fifth));
+}
+**/
+
+.events-content-para > p{
   margin: 2.5rem;
   padding: 1rem; 
   font-size: var(--font-size-para);
   color: var(--font-color-brown-dark);
   line-height: 6rem;
- }
+}
 
- /*Our process section **/
+/*Our process section **/
  section#ourprocess,
  section#work-preview,
  section#work-preview-page{ 
+   padding: var(--padding-section);
+   place-content: center;
+   display: grid;
+   grid-template-columns: repeat(4, 28rem);
+   grid-gap: 5rem;
+  }
+  
+  .ourprocess--container,
+  .work-preview--container{
+    background-color: var(--color-tertiary);
     grid-column: center-start / center-end;
-    padding: var(--padding-section);
-    place-content: center;
-    display: grid;
-    grid-template-columns: repeat(4, 28rem);
-    grid-gap: 5rem;
- }
- 
- section#work-preview-page{
-  grid-template-columns: repeat(3, 28rem);
- }
-
- /*features content ----**/
- section#features-content{ 
-   background-color: var(--color-tertiary);
-   grid-column: col-end 3 / container-end;
-   height: 400px;
- }
- 
- /*features text ----**/
+    margin-bottom: 4rem;
+  }
+  
+  section#work-preview-page{
+    grid-template-columns: repeat(3, 28rem);
+  }
+  
+  /*features content ----**/
+  section#features-content{ 
+    border:2px solid var(--color-sixth);
+    background-color: var(--color-tertiary);
+    grid-column: col-end 3 / container-end;
+    height: 400px;
+  }
+  
+  /*features text ----**/
  section#features-text{ 
    background-color: var(--color-fifth);
+   border:2px solid var(--color-tertiary);
    grid-column: col-start 3 / col-end 3;
+   border-top-left-radius: 3rem;
+   border-bottom-left-radius: 3rem;
    height: 400px;
+   border-right: none;
+ }
+
+ section#social-brands{
+    display: grid;
+    grid-column: container-start / container-end;
+    place-content: center;
+ }
+
+ section#social-brands h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
  }
  
  /*footer ----**/
@@ -306,6 +397,12 @@ header#header::before {
 
 
 
+ @media screen and (max-width:1178px){
+  section#work-preview-page{ 
+    grid-template-columns: repeat(auto-fit, 28rem);
+  }
+
+ }
 
  @media screen and (max-width:1000px){
   .header_logo-content--para{
@@ -324,9 +421,26 @@ header#header::before {
   section#features-content{ 
     grid-column: container-start / container-end;
   }
+
+  .sub-service--price--and--desc{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  section#services-and-pricing-page{
+    place-content: center;
+  }
+
 }
 
 @media screen and (max-width:600px){
+
+  .header_logo-content--quatation-container{
+    width: var(--width-for-msg--container-600);
+  }
 
   section#features-content {
     background-color: var(--color-secondary);
@@ -358,4 +472,86 @@ header#header::before {
     section#work-preview-page{ 
       grid-template-columns: repeat(auto-fit, 28rem);
     }
+
+    section#work-preview-page{
+      margin: 0 auto;
+      width: 35rem;
+    }
+
+    section#services-and-pricing-page .services-and-pricing-page--content div{
+      display: grid;
+      place-content: center;
+      margin: 1rem;
+      padding: 1rem;
+      width: 30rem;
+    }
+
+    section#services-and-pricing-page .services-and-pricing-page--content div h2{
+      margin: 1rem;
+    }
+
+    /*
+    
+    h2{
+        margin-bottom: 3rem;
+        font-size:4rem;
+    }
+
+    .sub-service--price--and--desc .sub-service--price--and--desc--first-visit p{
+        margin-bottom: 2rem;
+    }
+
+    h3{
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 0.75rem;
+        width: fit-content;
+        background-color: var(--color-fifth);
+    }
+
+    .span{
+        width: fit-content;
+        background-color: var(--color-sixth);
+        color: var(--clr-white);
+        padding: 1rem;
+        border-radius: 0.75rem;
+    }
+
+    p{
+        
+        color: var(--font-color-brown-dark);
+    }
+
+    .sub-service{
+        text-transform: capitalize;
+        font-size: 3.5rem;
+        text-shadow:var(--color-fifth);
+    }
+
+    .price {
+        display: grid;
+        background-color: var(--color-tertiary-dark);
+        width: 15vw;
+        height: 15vw;
+        max-width: 10rem;
+        max-height: 10rem;
+        border-radius: 50%;
+        place-content: center;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .sub-service--price--and--desc{
+        display: flex;
+        align-items: center;
+    }
+
+    .sub-service--price--and--desc p{
+        width: fit-content;
+    }
+
+    .note{
+        background-color: var(--color-white);
+    }
+    **/
 }

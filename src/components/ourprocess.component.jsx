@@ -41,6 +41,8 @@ const OurProcess = () => {
     return(
         <>
         <Maintitle title={<h2>Our process</h2>}/>
+        <div className="ourprocess--container"> 
+
         <TestimonialsWrapper id="ourprocess" bkg1={bkg1} bkg2={bkg2} bkg3={bkg3} bkg4={bkg4} bkg5={bkg5} bkg6={bkg6}>
         {testData.map((card) => {
             const { id, title, icon, description } = card
@@ -50,10 +52,13 @@ const OurProcess = () => {
                 <h2 className="testimonials-card--title"><i>{icon}</i> {title}</h2>
                 </div>
                 <div className="testimonials-card--back">
+                <h2 className="testimonials-card--title"><i>{icon}</i> {title}</h2>    
                     { id === 3 ? 
                     <>
-                    <h3><p>{subtitle}</p></h3>
                     <ul>
+                        <li>
+                        <h3><p>{subtitle}</p></h3>  
+                        </li>
                         <li>
                             <img src={checkmark} alt='checkmark'/> <p>{step1}</p>
                         </li>
@@ -82,6 +87,7 @@ const OurProcess = () => {
             )
         })}
     </TestimonialsWrapper>
+        </div>
         
         </>
 
@@ -94,6 +100,9 @@ const OurProcess = () => {
 }
 
 const TestimonialsWrapper = styled.section`
+    margin: 2rem;
+    padding: 2rem;
+
    .testimonials-card{
     width: 28rem;
     height: 50rem;
@@ -118,10 +127,10 @@ const TestimonialsWrapper = styled.section`
     width: 100%;
     height: 100%;
     transition: all 2s ease-in-out;
-    backface-visibility: hidden;
+    backface-visibility: hidden; 
     transform: perspective(100rem);
 
-    display: grid;
+    
     justify-items: center;
     align-items: start;
     padding: 3rem;
@@ -137,19 +146,21 @@ const TestimonialsWrapper = styled.section`
     }
 
     .testimonials-card--back ul{
-        display: grid;
         place-content: center;
     }
 
     .testimonials-card--back ul li{
         display: flex;
-        margin: 1rem;
+        margin: 1.5rem;
     }
 
     .testimonials-card--back ul li img{
         width: 2rem;
         height: 2rem;
+       
     }
+
+    
 
     .testimonials-card--front h2{
     background-color: var(--color-secondary-light);
@@ -157,6 +168,35 @@ const TestimonialsWrapper = styled.section`
     padding: 1rem;
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
+    }
+
+    .testimonials-card--back h2{
+    background-color: var(--color-sixth);
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    }
+
+    .testimonials-card--back .testimonials-card--title i{
+        color: var(--color-secondary);
+    }
+
+    .testimonials-card--title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    .testimonials-card--title i {
+        
+    margin-right: 0.5rem; /* Adjust the spacing between the icon and title as needed */
+    }
+
+
+    .testimonials-card--back h2{
+        margin-bottom: 1.7rem;
     }
 
     ul li img {
