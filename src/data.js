@@ -72,10 +72,12 @@ export const mainNavLinks = [
         linkname:'work preview',
         url:'/work-preview'
     },
-    {
+    /**
+     * {
         id:5,
         linkname:'contact'
     }
+     */
 ]
 
 export const MainMessage = 'Clo Solutions LOGO';

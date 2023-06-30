@@ -132,7 +132,7 @@ const EmailForm = () => {
           </CloseButton>
           <div style={{ textAlign: 'center' }}>
             <p>Email: <a href="mailto:closolutions@outlook.com">closolutions@outlook.com</a></p>
-            <p>Phone: +1 754 7796474</p>
+            <p>Phone: +1 754 779 6474</p>
           </div>
           {/**<input
             type="email"

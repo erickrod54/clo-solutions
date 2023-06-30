@@ -18,7 +18,7 @@ const ServicesAndPricing = () => {
                 <div key={service.id}>
                 <h2 className="span">{service.title}</h2>
                 <div className='sub-service--price--and--desc'>
-                    {service.price && <div className="price"> ${service.price}</div>}
+                    {service.price && <div className="price"> ${service.price} h/r</div>}
                     {service.title === 'First visit' ? 
                     <>
                     <div className="sub-service--price--and--desc--first-visit">
@@ -38,7 +38,7 @@ const ServicesAndPricing = () => {
                         <li key={subService.id}>
                         <h3 className='sub-service'>{subService.title}</h3>
                         <div className='sub-service--price--and--desc'>
-                            <div className="price">${subService.price}</div>
+                            <div className="price">${subService.price} h/r</div>
                             <p>{subService.description}</p>
                         </div>
                         </li>
@@ -97,11 +97,11 @@ const ServicesAndPricingWrapper = styled.section`
         background-color: var(--color-tertiary-dark);
         width: 15vw;
         height: 15vw;
-        max-width: 10rem;
-        max-height: 10rem;
+        max-width: 14rem;
+        max-height: 14rem;
         border-radius: 50%;
         place-content: center;
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 700;
     }
 
@@ -131,8 +131,8 @@ const ServicesAndPricingWrapper = styled.section`
         }
 
         .price {
-            width: 20vw;
-            height: 20vw;
+            width: 10.7rem;
+            height: 10.7rem;
         }
     }
 `
