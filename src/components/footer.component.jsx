@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useCloContext } from "../context";
 
 
 /**vlv-villages version 1.04 - FooterComponent -
@@ -13,12 +14,16 @@ import styled from "styled-components";
 
 const FooterComponent = () => {
 
+    const { contactInfo } = useCloContext()
+
+    const cellphone = contactInfo[0].cellphone;
+    
     return(
         <section id='footer'>
         <Wrapper>
             <p>&copy; { new Date().getFullYear()}</p>
             <span> Clo Solutions  |  Organization Services </span>
-            <p>Free consultation Phone: <strong> +1 (754) 7796474</strong></p>
+            <p>Free consultation Phone: <strong>{cellphone}</strong></p>
             <p>  All Rights reserved</p>
         </Wrapper>
       </section>

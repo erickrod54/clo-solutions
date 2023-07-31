@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import { MdClose, MdEmail } from 'react-icons/md';
+import { useCloContext } from '../context';
 
 const StyledEmailForm = styled.div`
   position: relative;
@@ -76,6 +77,12 @@ const EmailForm = () => {
   const [message, setMessage] = useState('');
   const [formVisible, setFormVisible] = useState(false);
 
+
+  const { contactInfo } = useCloContext();
+
+  const cellphone = contactInfo[0].cellphone;
+  const email_address = contactInfo[0].email;
+
   // eslint-disable-next-line
   const handleEmailClick = () => {
     window.location.href = 'mailto:closolutions@outlook.com';
@@ -131,8 +138,8 @@ const EmailForm = () => {
             <MdClose />
           </CloseButton>
           <div style={{ textAlign: 'center' }}>
-            <p>Email: <a href="mailto:closolutions@outlook.com">closolutions@outlook.com</a></p>
-            <p>Phone: +1 754 779 6474</p>
+            <p>Email: <a href="mailto:closolutions@outlook.com">{email_address}</a></p>
+            <p>Phone: {cellphone}</p>
           </div>
           {/**<input
             type="email"

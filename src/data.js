@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight, faFaceSmile, faPersonChalkboard, faPeopleRoof, faCalendarDays, faMagicWandSparkles, faSprayCanSparkles, faHandPointer } from '@fortawesome/free-solid-svg-icons';
 import { checkmark, closetafter, closetbefore, closetheader, closetheaderblue, consultationbkg, consultationbkgremove, hamperafter, hamperbefore, kitchencabinetsafter, kitchencabinetsbefore, kitchendrawerafter, kitchendrawerbefore, testbkg1, testbkg2, testbkg3, testbkg4, wardrobeafter, wardrobebefore } from "./assets/index.assets";
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 /***
  * 
  * 
@@ -33,6 +34,14 @@ export const handpointer = <FontAwesomeIcon icon={faHandPointer} />
 export const facebook = <FontAwesomeIcon icon={faFacebook} />
 export const instagram = <FontAwesomeIcon icon={faInstagram} />
 
+
+export const contactInfo = [
+    {
+        id:1,
+        cellphone:'+1 (561) 614-6280',
+        email:'closolutions@outlook.com'
+    }
+]
 export const cloIcons = [
     {
       id:1,
