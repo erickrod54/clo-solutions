@@ -1,20 +1,16 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faQuoteRight, faFaceSmile, faPersonChalkboard, faPeopleRoof, faCalendarDays, faMagicWandSparkles, faSprayCanSparkles, faHandPointer } from '@fortawesome/free-solid-svg-icons';
-import { checkmark, closetafter, closetbefore, closetheader, closetheaderblue, consultationbkg, consultationbkgremove, hamperafter, hamperbefore, kitchencabinetsafter, kitchencabinetsbefore, kitchendrawerafter, kitchendrawerbefore, testbkg1, testbkg2, testbkg3, testbkg4, wardrobeafter, wardrobebefore } from "./assets/index.assets";
+import { cabinetafter1, cabinetbefore1, checkmark, closetafter, closetafter2, closetbefore, closetbefore2, closetheader, closetheaderblue, consultationbkg, consultationbkgremove, drawerafter3, drawerbefore3, hamperafter, hamperbefore, kitchencabinetsafter, kitchencabinetsbefore, kitchendrawerafter, kitchendrawerbefore, roomafter4, roombefore4, shelfafter5, shelfbefore5, studioafter6, studiobefore6, testbkg1, testbkg2, testbkg3, testbkg4, wardrobeafter, wardrobebefore } from "./assets/index.assets";
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
-/***
+
+/**
+ * Release Candidate Clo Solutions organization services - Features:
  * 
  * 
- * closetheader, closetheaderblue
- home
-Services and pricing
-About us
-contact
-
-crear data para los 'links'
-
-crear data para 'content' component
+ *        --> Organization assets july 31 - 2023
+ * 
+ * Note: testing and uploading assets
  */
 
 export const leftquote = <FontAwesomeIcon icon={faQuoteLeft} />
@@ -323,6 +319,13 @@ export const organizationBkgImages = [
         imagesfrontbkg: wardrobebefore,
         imagesbackbkg: wardrobeafter
     },
+    {
+        id:6,
+        title:'Cabinet before',
+        titleback:'Cabinet after',
+        imagesfrontbkg: cabinetbefore1,
+        imagesbackbkg: cabinetafter1
+    },
    /**
     *  {
         id:6,
@@ -333,6 +336,20 @@ export const organizationBkgImages = [
     }
     */
 ]
+
+               
+/**
+ *  closetafter2,              
+ closetbefore2,                
+ drawerafter3,              
+ drawerbefore3,              
+ roomafter4,                 
+ roombefore4,                 
+ shelfbefore5,                
+ shelfafter5,                 
+ studiobefore6,                 
+ studioafter6
+ */
 
 
 export const testData = [
