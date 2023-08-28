@@ -1,3 +1,14 @@
+
+/**
+ * Release Candidate Clo Solutions organization services - index > assets - 
+ * Features:
+ * 
+ * 
+ *        --> fixing 'cabinetafter1'
+ * 
+ */
+
+
 import logocolor from './clo-solutions-logo-color.png';
 import testbkg1 from './testimages/testimonials-1.jpg';
 import testbkg2 from './testimages/testimonials-2.jpg';
@@ -24,7 +35,7 @@ import wardrobebefore from './organization/wardrobe-before.jpg';
 import wardrobeafter from './organization/wardrobe-after.jpg';
 
 /**organization assets july 31 - 2023*/
-import cabinetafter1 from './organization/kitchen-drawer-after.jpg';
+import cabinetafter1 from './organization/cabinet_after1.jpg';
 import cabinetbefore1 from './organization/cabinet_before1.jpg'
 import closetafter2 from './organization/closet_after2.jpg';
 import closetbefore2 from './organization/closet_before2.jpg';
