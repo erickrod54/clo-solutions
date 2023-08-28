@@ -8,7 +8,7 @@ import { useCloContext } from "../context";
  * - Features:
  * 
  * 
- *        --> Adding 'closetafter2' and 'closetabefore2'
+ *        --> Adding 'drawerbefore3' and 'drawerafter3'
  * 
  * Note: testing and uploading assets, the asset has to be destructured and 
  * after has to be drilled through the component 'WorkPreviewWrapper'
@@ -52,6 +52,8 @@ const WorkPreviewPage = () => {
     const cabinetafter1 = organizationBkgImages[5].imagesbackbkg;
     const closetbefore2 = organizationBkgImages[6].imagesfrontbkg;
     const closetafter2 = organizationBkgImages[6].imagesbackbkg;
+    const drawerbefore3 = organizationBkgImages[7].imagesfrontbkg;
+    const drawerafter3 = organizationBkgImages[7].imagesbackbkg;
 
    /**test in the return -- image is comming <img src={cabinetbefore1} alt="cabinetbefore1"/> */
 
@@ -78,6 +80,8 @@ const WorkPreviewPage = () => {
                 cabinetafter1={cabinetafter1}
                 closetbefore2={closetbefore2}
                 closetafter2={closetafter2}
+                drawerbefore3={drawerbefore3}
+                drawerafter3={drawerafter3}
                 > 
                 
             {organizationBkgImages.map((card) => {
@@ -117,7 +121,8 @@ const WorkPreviewWrapper = styled.section`
     .work-preview-page-card:nth-child(4) .work-preview-page-card--front::before,
     .work-preview-page-card:nth-child(5) .work-preview-page-card--front::before,
     .work-preview-page-card:nth-child(6) .work-preview-page-card--front::before,
-    .work-preview-page-card:nth-child(7) .work-preview-page-card--front::before
+    .work-preview-page-card:nth-child(7) .work-preview-page-card--front::before,
+    .work-preview-page-card:nth-child(8) .work-preview-page-card--front::before
     {
     background-repeat: no-repeat;
     background-position: center;
@@ -275,6 +280,19 @@ const WorkPreviewWrapper = styled.section`
         content: "";
         background-image: url(${({closetafter2}) => closetafter2});
     }
+    
+    .work-preview-page-card:nth-child(8) .work-preview-page-card--front::before{
+        content: "";
+        opacity: 0.5; /* Set the opacity of the background image */
+        z-index: -1; /* Send the background image behind the text */
+        background-image: url(${({drawerbefore3}) => drawerbefore3});
+    }
+
+    .work-preview-page-card:nth-child(8) .work-preview-page-card--back{
+        content: "";
+        background-image: url(${({drawerafter3}) => drawerafter3});
+    }
+    
 
     .work-preview-page-card--back {
     /*this prop using 'rotateY'  is related with 'backface-visibility: hidden;'*/
