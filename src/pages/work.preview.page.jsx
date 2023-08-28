@@ -3,13 +3,23 @@ import styled from "styled-components";
 import Maintitle from "../components/main.title.component";
 import { useCloContext } from "../context";
 
+/**
+ * Release Candidate Clo Solutions organization services - work preview page
+ * - Features:
+ * 
+ * 
+ *        --> Organization assets july 31 - 2023
+ * 
+ * Note: testing and uploading assets
+ */
+
 
 const WorkPreviewPage = () => {
 
     const { organizationBkgImages, myWorkIcons } = useCloContext();
 
-    console.log('myWorkIcons ==> ', myWorkIcons)
-    //console.log('organizationBkgImages in the page! ==> ', organizationBkgImages)
+    //console.log('myWorkIcons ==> ', myWorkIcons)
+    console.log('organizationBkgImages in the page! ==> ', organizationBkgImages[5].imagesfrontbkg)
 
     const closetbefore = organizationBkgImages[0].imagesfrontbkg;
     const closetafter = organizationBkgImages[0].imagesbackbkg;
@@ -21,12 +31,17 @@ const WorkPreviewPage = () => {
     const kitchencabinetsafter = organizationBkgImages[3].imagesbackbkg;
     const wardrobebefore = organizationBkgImages[4].imagesfrontbkg;
     const wardrobeafter = organizationBkgImages[4].imagesbackbkg;
+    const cabinetbefore1 = organizationBkgImages[5].imagesfrontbkg;
+    const cabinetafter1 = organizationBkgImages[5].imagesbackbkg;
+
+   /**test in the return -- image is comming <img src={cabinetbefore1} alt="cabinetbefore1"/> */
 
     /**icons */
     const handpointer = myWorkIcons[2].icon;
 
     return(
         <>
+        
         <Maintitle title={<h2>Some of my work</h2>}/>
         <div className="work-preview-page--container">
             <WorkPreviewWrapper id="work-preview-page" 
@@ -39,7 +54,10 @@ const WorkPreviewPage = () => {
                 kitchencabinetsbefore={kitchencabinetsbefore} 
                 kitchencabinetsafter={kitchencabinetsafter}
                 wardrobebefore={wardrobebefore}
-                wardrobeafter={wardrobeafter}>
+                wardrobeafter={wardrobeafter}
+                cabinetbefore1={cabinetbefore1}
+                cabinetafter1={cabinetafter1}
+                > 
                 
             {organizationBkgImages.map((card) => {
                 const { id } = card
@@ -76,7 +94,8 @@ const WorkPreviewWrapper = styled.section`
     .work-preview-page-card:nth-child(2) .work-preview-page-card--front::before,
     .work-preview-page-card:nth-child(3) .work-preview-page-card--front::before,
     .work-preview-page-card:nth-child(4) .work-preview-page-card--front::before,
-    .work-preview-page-card:nth-child(5) .work-preview-page-card--front::before{
+    .work-preview-page-card:nth-child(5) .work-preview-page-card--front::before,
+    .work-preview-page-card:nth-child(6) .work-preview-page-card--front::before{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -208,6 +227,18 @@ const WorkPreviewWrapper = styled.section`
     .work-preview-page-card:nth-child(5) .work-preview-page-card--back{
         content: "";
         background-image: url(${({wardrobeafter}) => wardrobeafter});
+    }
+
+    .work-preview-page-card:nth-child(6) .work-preview-page-card--front::before{
+        content: "";
+        opacity: 0.5; /* Set the opacity of the background image */
+        z-index: -1; /* Send the background image behind the text */
+        background-image: url(${({cabinetbefore1}) => cabinetbefore1});
+    }
+
+    .work-preview-page-card:nth-child(6) .work-preview-page-card--back{
+        content: "";
+        background-image: url(${({cabinetafter1}) => cabinetafter1});
     }
 
     .work-preview-page-card--back {
