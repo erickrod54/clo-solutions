@@ -8,7 +8,7 @@ import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
  * Release Candidate Clo Solutions organization services - data js - Features:
  * 
  * 
- *        --> Adding 'closetafter2' and 'closetabefore2' to 
+ *        --> Adding 'drawerbefore3' and 'drawerafter3' to 
  *            organizationBkgImages
  * 
  * Note: testing and uploading assets
@@ -334,6 +334,13 @@ export const organizationBkgImages = [
         imagesfrontbkg: closetbefore2,
         imagesbackbkg: closetafter2
     },
+    {
+        id:8,
+        title:'Drawer Before',
+        titleback:'Drawer After',
+        imagesfrontbkg: drawerbefore3,
+        imagesbackbkg: drawerafter3
+    }
    /**
     *  {
         id:6,
