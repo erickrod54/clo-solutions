@@ -8,9 +8,26 @@ import { useCloContext } from "../context";
  * - Features:
  * 
  * 
- *        --> Organization assets july 31 - 2023
+ *        --> Adding 'closetafter2' and 'closetabefore2'
  * 
- * Note: testing and uploading assets
+ * Note: testing and uploading assets, the asset has to be destructured and 
+ * after has to be drilled through the component 'WorkPreviewWrapper'
+ * 
+ * once this is done has to be added in two places in the style 
+ * component, the number changes ( this example is # 7):
+ * 
+ * style before ->
+ *          .work-preview-page-card:nth-child(7) .work-preview-page-card--front::before
+ * 
+ * style after -->
+ * 
+ *           .work-preview-page-card:nth-child(7) .work-preview-page-card--front::before{
+ * 
+ *            ...
+ *  
+ *           .work-preview-page-card:nth-child(7) .work-preview-page-card--back{ 
+ * 
+ *            ...  
  */
 
 
@@ -33,6 +50,8 @@ const WorkPreviewPage = () => {
     const wardrobeafter = organizationBkgImages[4].imagesbackbkg;
     const cabinetbefore1 = organizationBkgImages[5].imagesfrontbkg;
     const cabinetafter1 = organizationBkgImages[5].imagesbackbkg;
+    const closetbefore2 = organizationBkgImages[6].imagesfrontbkg;
+    const closetafter2 = organizationBkgImages[6].imagesbackbkg;
 
    /**test in the return -- image is comming <img src={cabinetbefore1} alt="cabinetbefore1"/> */
 
@@ -57,6 +76,8 @@ const WorkPreviewPage = () => {
                 wardrobeafter={wardrobeafter}
                 cabinetbefore1={cabinetbefore1}
                 cabinetafter1={cabinetafter1}
+                closetbefore2={closetbefore2}
+                closetafter2={closetafter2}
                 > 
                 
             {organizationBkgImages.map((card) => {
@@ -95,7 +116,9 @@ const WorkPreviewWrapper = styled.section`
     .work-preview-page-card:nth-child(3) .work-preview-page-card--front::before,
     .work-preview-page-card:nth-child(4) .work-preview-page-card--front::before,
     .work-preview-page-card:nth-child(5) .work-preview-page-card--front::before,
-    .work-preview-page-card:nth-child(6) .work-preview-page-card--front::before{
+    .work-preview-page-card:nth-child(6) .work-preview-page-card--front::before,
+    .work-preview-page-card:nth-child(7) .work-preview-page-card--front::before
+    {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -239,6 +262,18 @@ const WorkPreviewWrapper = styled.section`
     .work-preview-page-card:nth-child(6) .work-preview-page-card--back{
         content: "";
         background-image: url(${({cabinetafter1}) => cabinetafter1});
+    }
+
+    .work-preview-page-card:nth-child(7) .work-preview-page-card--front::before{
+        content: "";
+        opacity: 0.5; /* Set the opacity of the background image */
+        z-index: -1; /* Send the background image behind the text */
+        background-image: url(${({closetbefore2}) => closetbefore2});
+    }
+
+    .work-preview-page-card:nth-child(7) .work-preview-page-card--back{
+        content: "";
+        background-image: url(${({closetafter2}) => closetafter2});
     }
 
     .work-preview-page-card--back {
