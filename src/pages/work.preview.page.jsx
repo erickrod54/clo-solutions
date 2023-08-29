@@ -8,7 +8,7 @@ import { useCloContext } from "../context";
  * - Features:
  * 
  * 
- *        --> Adding 'roombefore4' and 'roomafter4'
+ *        --> Adding 'shelfafter5' and 'shelbefore5'
  * 
  * Note: testing and uploading assets, the asset has to be destructured and 
  * after has to be drilled through the component 'WorkPreviewWrapper'
@@ -56,6 +56,9 @@ const WorkPreviewPage = () => {
     const drawerafter3 = organizationBkgImages[7].imagesbackbkg;
     const roombefore4 = organizationBkgImages[8].imagesfrontbkg;
     const roomafter4 = organizationBkgImages[8].imagesbackbkg;
+    const shelfbefore5 = organizationBkgImages[9].imagesfrontbkg;
+    const shelfafter5 = organizationBkgImages[9].imagesbackbkg;
+    
 
    /**test in the return -- image is comming <img src={cabinetbefore1} alt="cabinetbefore1"/> */
 
@@ -86,6 +89,8 @@ const WorkPreviewPage = () => {
                 drawerafter3={drawerafter3}
                 roombefore4={roombefore4}
                 roomafter4={roomafter4}
+                shelfbefore5={shelfbefore5}
+                shelfafter5={shelfafter5}
                 > 
                 
             {organizationBkgImages.map((card) => {
@@ -127,7 +132,8 @@ const WorkPreviewWrapper = styled.section`
     .work-preview-page-card:nth-child(6) .work-preview-page-card--front::before,
     .work-preview-page-card:nth-child(7) .work-preview-page-card--front::before,
     .work-preview-page-card:nth-child(8) .work-preview-page-card--front::before,
-    .work-preview-page-card:nth-child(9) .work-preview-page-card--front::before
+    .work-preview-page-card:nth-child(9) .work-preview-page-card--front::before,
+    .work-preview-page-card:nth-child(10) .work-preview-page-card--front::before
     {
     background-repeat: no-repeat;
     background-position: center;
@@ -308,6 +314,18 @@ const WorkPreviewWrapper = styled.section`
     .work-preview-page-card:nth-child(9) .work-preview-page-card--back{
         content: "";
         background-image: url(${({roomafter4}) => roomafter4 });
+    }
+
+    .work-preview-page-card:nth-child(10) .work-preview-page-card--front::before{
+        content: "";
+        opacity: 0.5; /* Set the opacity of the background image */
+        z-index: -1; /* Send the background image behind the text */
+        background-image: url(${({shelfbefore5}) => shelfbefore5});
+    }
+
+    .work-preview-page-card:nth-child(10) .work-preview-page-card--back{
+        content: "";
+        background-image: url(${({shelfafter5}) => shelfafter5 });
     }
     
 
