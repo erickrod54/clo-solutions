@@ -8,7 +8,7 @@ import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
  * Release Candidate Clo Solutions organization services - data js - Features:
  * 
  * 
- *        --> Adding 'roomafter4' and 'roombefore4' to 
+ *        --> Adding 'shelfbefore5' and 'shelafter5' to 
  *            organizationBkgImages
  * 
  * Note: testing and uploading assets
@@ -347,6 +347,13 @@ export const organizationBkgImages = [
         titleback:'Room After',
         imagesfrontbkg: roombefore4,
         imagesbackbkg: roomafter4
+    },
+    {
+        id:10,
+        title:'Shelf Before',
+        titleback:'Shelf After',
+        imagesfrontbkg: shelfbefore5,
+        imagesbackbkg: shelfafter5
     }
    /**
     *  {
