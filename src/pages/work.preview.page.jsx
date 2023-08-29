@@ -8,7 +8,7 @@ import { useCloContext } from "../context";
  * - Features:
  * 
  * 
- *        --> Adding 'shelfafter5' and 'shelbefore5'
+ *        --> Adding 'studiobefore6' and 'studioafter6'
  * 
  * Note: testing and uploading assets, the asset has to be destructured and 
  * after has to be drilled through the component 'WorkPreviewWrapper'
@@ -58,6 +58,8 @@ const WorkPreviewPage = () => {
     const roomafter4 = organizationBkgImages[8].imagesbackbkg;
     const shelfbefore5 = organizationBkgImages[9].imagesfrontbkg;
     const shelfafter5 = organizationBkgImages[9].imagesbackbkg;
+    const studiobefore6 = organizationBkgImages[10].imagesfrontbkg;
+    const studioafter6 = organizationBkgImages[10].imagesbackbkg;
     
 
    /**test in the return -- image is comming <img src={cabinetbefore1} alt="cabinetbefore1"/> */
@@ -91,6 +93,8 @@ const WorkPreviewPage = () => {
                 roomafter4={roomafter4}
                 shelfbefore5={shelfbefore5}
                 shelfafter5={shelfafter5}
+                studiobefore6={studiobefore6}
+                studioafter6={studioafter6}
                 > 
                 
             {organizationBkgImages.map((card) => {
@@ -133,7 +137,8 @@ const WorkPreviewWrapper = styled.section`
     .work-preview-page-card:nth-child(7) .work-preview-page-card--front::before,
     .work-preview-page-card:nth-child(8) .work-preview-page-card--front::before,
     .work-preview-page-card:nth-child(9) .work-preview-page-card--front::before,
-    .work-preview-page-card:nth-child(10) .work-preview-page-card--front::before
+    .work-preview-page-card:nth-child(10) .work-preview-page-card--front::before,
+    .work-preview-page-card:nth-child(11) .work-preview-page-card--front::before
     {
     background-repeat: no-repeat;
     background-position: center;
@@ -328,6 +333,17 @@ const WorkPreviewWrapper = styled.section`
         background-image: url(${({shelfafter5}) => shelfafter5 });
     }
     
+    .work-preview-page-card:nth-child(11) .work-preview-page-card--front::before{
+        content: "";
+        opacity: 0.5; /* Set the opacity of the background image */
+        z-index: -1; /* Send the background image behind the text */
+        background-image: url(${({studiobefore6}) => studiobefore6});
+    }
+
+    .work-preview-page-card:nth-child(11) .work-preview-page-card--back{
+        content: "";
+        background-image: url(${({studioafter6}) => studioafter6 });
+    }
 
     .work-preview-page-card--back {
     /*this prop using 'rotateY'  is related with 'backface-visibility: hidden;'*/
